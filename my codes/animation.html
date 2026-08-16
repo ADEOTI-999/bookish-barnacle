@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style type="text/css">
+@keyframes myFirst {
+    from {
+        background-color: bisque;
+        top: 0px;
+        left: 300px;
+    }
+    to {
+        background-color: coral;
+        top: 200px;
+        left: 300px;
+    }
+    
+}
+@keyframes mySecond {
+    1% {
+        top: 0px;
+        right: 0px;
+        background-color: aqua;
+
+    }
+    25% {
+   top: 0px;
+        left: 150px;
+        background-color: teal;
+    }
+    50% {
+  top: 100px;
+        left: 150px;
+        background-color: lightskyblue;
+    }
+    100% {
+  top: 100px;
+        left: 0px;
+        background-color: lightgreen;
+}
+}
+
+#fanime {
+    animation: myFirst 3s  3s 4 alternate-reverse ;
+   
+    position: relative;
+     
+    height: 150px;
+    
+    width: 150px;
+    background-color: bisque;
+}
+#sanime {
+    animation: mySecond 3s ease-in-out 0s infinite ;
+    position: relative;
+     border-radius: 50%;
+    
+    height: 150px;
+    width: 150px;
+    background-color: aqua;
+}
+#tanime {
+    animation: myFirst 3s 3s 2  reverse;
+    
+    position: relative;
+
+    height: 150px;
+ 
+    width: 150px;
+    background-color: bisque;
+}
+#ffanime {
+    animation: mySecond 3s ease-in-out 0s infinite alternate;
+   
+    position: relative;
+     border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    background-color: aqua;
+}
+
+
+    </style>
+</head>
+<body>
+    <div id="fanime">alternate-reverse</div>
+    <div id="sanime"></div><br>
+    <div id="tanime">reverse</div>
+    <div id="ffanime">alternate</div>
+    <p style="margin-top:100px;">
+        <ul>
+            <li>alternate : 0% to 100% (forward) then 100% to 0% (backward)</li>
+            <li>alternate-reverse : 100% to 0% (backward)then 0% to 100% (forward)</li>
+            <li>reverse : 100% to 0% then jumps (resets) to 100%</li>
+        </ul>
+    </p>
+    <div id="ssanime" style="margin: 100px;">Forwards</div>
+</body>
+</html>

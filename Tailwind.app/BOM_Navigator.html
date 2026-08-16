@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Naviagator</title>
+</head>
+<body>
+   <p>Platform:  <span id="de1"></span></p>
+  
+   <p>Language:<span id="dem1"></span></p> 
+   <p> App Name: <span id="demo1"></span></p>
+   <p>App Code Name:  <span id="demon1"></span></p>
+   <p>App Vesion: <span id="de2"></span></p>
+   <p>User Agent: <span id="dem2"></span></p> 
+    <p>Online: <span id="demo2"></span></p> 
+    <script type="text/javascript">
+        document.getElementById("de1").innerHTML = navigator.platform;
+        document.getElementById("dem1").innerHTML = navigator.language;
+        document.getElementById("demo1").innerHTML = navigator.appName;
+        document.getElementById("demon1").innerHTML = navigator.appCodeName;
+        document.getElementById("de2").innerHTML = navigator.appVersion;
+        document.getElementById("dem2").innerHTML = navigator.userAgent;
+        document.getElementById("demo2").innerHTML = navigator.onLine;
+    </script>
+</body>
+</html>

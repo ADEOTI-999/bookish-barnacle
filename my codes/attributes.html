@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+a[title] {
+    color:red;
+}
+
+a[title="noth"] {
+    color: lime;
+    outline: 1px solid pink;
+}
+
+a[title~="link"]  {
+color: navy;
+}
+div[lang|="en"] {
+color: darkkhaki;
+}
+a[href^="#"] {
+    color: brown;
+}
+a[href$=".net"] {
+    color: forestgreen;
+}
+a[href*="what"] {
+    color: gold;
+}
+a[title="codeliber" i] {
+color: rgba(0, 183, 255, 0.945);
+outline: 1px solid green;
+}
+    </style>
+    <title>Attributes</title>
+</head>
+<body>
+    <p>click here <a href="https://www.stuffs.com" title="example">stuffs</a> </p>
+    <p>i have an attribte <a href="https://www.stuffs.com" title="noth">click me</a></p>
+    <p> value more than one and seperated by a white space i think the value is more like a key word 
+        <a href="https://www.stuffs.com" title="link">click me</a></p>
+     <a href="https://www.stuffs.com" title="my link"> click me</a> 
+     <a href="https://www.stuffs.com" title="this link">click me</a>
+      <a href="https://www.stuffs.com" title="link for">click me </a>
+       <a href="https://www.stuffs.com" title="a link">click me</a>
+       <p>The ones below the value can be followed by a hyphen (-) </p>
+       <div lang="en-US"> i am a boy</div>
+       <div lang="en-GB"> i am a boy</div>
+       <div lang="en-AU"> i am a boy</div>
+       <div lang="fr-TW"> i am a boy</div>
+       <p>The ones below their value are  prefixed by <b>smthg lets say <q>#</q></b> in the attribute then <b><q>#</q></b>is used as value</p>
+       <a href="https://www.stuffs.com"> click me</a>
+       <p> Go to <a href="#section1">Section 1</a></p>
+       <h1 id="section1" style="margin-top: 1000px; margin-bottom: 1000px;">Section 1</h1>
+        <p>The ones below their value are  suffixed by <b>smthg lets say <q>.net</q></b> in the attribute then <b><q>.net</q></b>is used as value</p>
+        <p>Let's go to <a href="https://www.stuffs.com">Stuffs.com</a></p>
+        <p>Let's go to <a href="https://www.stuffs.net">Stuffs.net</a></p>
+        <p>This one is when the value has a <b>keyword</b> in the attribute</p>
+        <a href="htts://www.whatnotandStuffs.net">click me</a>
+        <p>control <a href="https://www.stuffs.org">Click me</a></p>
+        <p> <b>i or I</b> is put in the bracket before closing, so it can be compared case-insensitively as in upper-case, lower-case stuffs like that</p>
+         <a href="https://www.stuffs.com" title="cOdeLiber">click me</a></p>
+
+
+
+    </body>
+</html> 

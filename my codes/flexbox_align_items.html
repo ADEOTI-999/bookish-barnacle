@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox Align Items </title>
+    <style type="text/css">
+        .container {
+            display: flex;
+            padding: 5px;
+            background: maroon;
+            height: 500px;
+        }
+        .container > div {
+            width: 130px;
+            line-height: 80px;
+            text-align: center;
+            margin: 5px;
+             background: coral;
+        }
+        #flex-start {
+            align-items: flex-start;
+        }
+        #flex-end {
+            align-items: flex-end;
+        }
+        #center {
+            align-items: center;
+        }
+        #stretch {
+            align-items: stretch;
+        }
+        #baseline {
+            align-items: baseline;
+        }
+    </style>
+
+</head>
+<body><p>flex-start</p>
+    <div class="container" id="flex-start"> 
+        <div style="font-size: 20px;">1</div>
+        <div style="font-size: 60px;">2</div>
+        <div style="font-size: 80px;">3</div>
+    </div><p>flex-end</p>
+    <div class="container" id="flex-end"> 
+        <div style="font-size: 20px;">1</div>
+        <div style="font-size: 60px;">2</div>
+        <div style="font-size: 80px;">3</div>
+    </div><p>center</p>
+     <div class="container" id="center"> 
+        <div style="font-size: 20px;">1</div>
+        <div style="font-size: 60px;">2</div>
+        <div style="font-size: 80px;">3</div>
+    </div><p>stretch</p>
+    <div class="container" id="stretch"> 
+        <div style="font-size: 20px;">1</div>
+        <div style="font-size: 60px;">2</div>
+        <div style="font-size: 80px;">3</div>
+    </div><p>baseline</p>
+    <div class="container" id="baseline"> 
+        <div style="font-size: 20px;">1</div>
+        <div style="font-size: 60px;">2</div>
+        <div style="font-size: 80px;">3</div>
+    </div><br>
+
+</body>
+</html>

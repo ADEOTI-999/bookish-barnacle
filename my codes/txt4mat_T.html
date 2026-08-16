@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+   <style type="text/css">
+       table, td {
+           border: 1px solid black;
+           border-spacing: 5px;
+       }
+       td {
+           padding: 5px;
+       }
+       img {
+           width: 100%;
+           heught: auto;
+       }
+   </style>
+</head>
+<body>
+     <a href="#" target="_blank">Busy</a><br>
+     <i>Me</i><br>
+     <b>Me</b><br>
+     <s>Me</s><br>
+     <em>Me</em><br>
+     <mark>Me</mark><br>
+     <q>Me</q><br>
+     <strong>Me</strong><br>
+     <u>Me</u><br>
+     <code>code</code><br>
+     <tt>typewriter text</tt><br>
+     <div>Div tag start in a new line</div>
+     <p>paragraph tag also</p>
+     <h3>Heading tag also</h3><br>
+     <span>span tag doesn't</span>
+     <img src="bull.png" alt="img tag also dont start in a new line">
+     <a href="https://www.stuffs.com" style="float: right;"> anchor tag also</a>
+     <p>
+         <span style="color: gold">He</span> <span style="color: blue">loves</span>
+          <span style="color: green">money</span> <span style="color: red">T</span> 
+          <span style="font-size: 20px;">o</span> <span style="color: orange; font-size: 20px;"    >o</span>
+          <span style="color: gold">Much</span>
+     </p>
+     
+            <table>
+                
+                <thead>
+                    <tr>
+                        <th>
+                            Physiology 
+                        </th>
+                        <th>
+                            Anatomy
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Excitable tissues</td>
+         <td>Embryology</td>        
+            </tr>
+      
+      
+      <tr>
+          <td>Cardiovascular system</td>
+       <td>Menstrual cycle</td>
+      </tr>       
+      
+         </tbody>
+         <tfooter>
+             <tr>
+                 <td>
+                     Its hard
+                 </td>
+                 <td>It's complex</td>
+                 </tr>
+         </tfooter>
+            </table>
+            <select id="mul" multiple>
+                 <option value="Chelsea">CHE</option>
+        <option value="Sweden">SWE</option>
+        <option value="Denmark">DEN</option>
+        <option value="Real Madrid">RMA</option>
+            </select>
+            <button onclick="getValue();">Show me</button>
+            <script type="text/javascript">
+                function getValue() {
+                    var options = document.getElementById("mul").options;
+                    var options_count = document.getElementById("mul").options.length;
+                    var value = [];
+                  for(var i = 0; i < options_count; i++) {
+                      if(options[i].selected) {
+                          value.push(options[i].value);
+                      }
+                  }
+                  alert(JSON.stringify(value));
+                }
+            </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icons</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+     <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+        .search {
+            display: flex;
+            margin: 30px;
+        }
+        .search > i {
+            text-align: center;
+            background: silver;
+            padding: 10px;
+            border: none;
+            outline: none;
+            min-width: 40px;
+             border-bottom-left-radius: 20px;
+              border-top-left-radius: 20px ;
+        }
+       
+        
+        .search > input {
+            padding: 10px;
+            border: 1px solid silver;
+             outline: none;
+            width: 60%;
+            background: white;
+            transition: width 1s;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px ;
+            border-bottom-right-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        .search:hover> input {
+            width: 75%;
+            border: 2px solid rgb(0, 255, 221);
+        }
+
+        .search:hover > i {
+             background: rgb(0, 255, 221);
+             color: white;
+        }
+
+     </style>
+</head>
+<body>
+    <div class="search">
+        <i class="material-symbols-outlined"> <img src="search.png" alt=""></i>
+        <input type="text" placeholder="search here....">
+    </div>
+    
+</body>
+</html>

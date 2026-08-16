@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This keyword</title>
+</head>
+<body>
+     <p id="de"></p>
+    <p id="dem"></p>
+    <p id="demo"> <button onclick="myFunc()"> Oye! </button></p>
+    <p id="demon"> <button id="btn"> change me</button></p>
+    <p id="de1"></p>
+    <p id="dem1"></p>
+    <p id="demo1"></p>
+    <p id="demon1"></p>
+    <p id="de2"></p>
+    <p id="dem2"></p>
+    <p id="demo2"></p>
+    <p id="demon2"></p>
+    <script type="text/javascript">
+const fruit = {
+    name: "cocoa",
+    color: "brown",
+    isSweet: false,
+    showFruit: function() {
+        document.getElementById("de").innerHTML = "The " + this.name +"  is " + this.color; 
+    }
+};
+
+fruit.showFruit();
+
+var car = "Benz";
+function greetUser() {
+    alert("Mucho Gusto");
+
+}
+document.getElementById("dem").innerHTML = window.car;
+window.greetUser();
+
+this.alert("Tu hablo yoruba");
+
+var lang = "Frances";
+function myFunc() {
+    var x = this;
+    x.alert ("Tu estudio " + x.lang +" por la manana, yo hablo " + x.lang);
+};
+const btn = document.getElementById("btn");
+btn.onclick = function() {
+    this.style.background = "orange";
+    this.style.color = "yellow";
+
+    
+}
+    </script>
+</body>
+</html>

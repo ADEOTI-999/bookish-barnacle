@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D and 3D Transforms</title>
+    <style type="text/css">
+        div {
+            width: 200px;
+            height: 200px;
+            background: teal;
+            border: coral solid 10px;
+            margin: 10px;
+          transition-duration: 1s;
+        }
+        #translate1:hover {
+            transform: translateX(30px);
+        }
+         #translate2:hover {
+            transform: translateY(30px);
+        }
+         #translate3:hover {
+            transform: translate(30px, -30px);
+        }
+        #rotate1, #rotate2 {
+            border-top: none;
+        }
+        #rotate1:hover {
+            transform: rotate(90deg);
+            
+        }
+         #rotate2:hover {
+            transform: rotate(-45deg);
+            
+        }
+        #scale1:hover{
+            transform: scale(.7);
+        }
+        #scale2:hover {
+            transform: scaleX(2);
+        }
+        #scale3:hover {
+            transform: scaleY(2);
+        }
+        #skew1:hover {
+            transform: skew(30deg, 30deg);
+        }
+         #skew2:hover {
+            transform: skewX(45deg);
+        }
+         #skew3:hover {
+            transform: skewY(-30deg);
+        }
+         #skew4:hover {
+            transform: skewY(30deg);
+        }
+         #matrix:hover {
+            transform: matrix(-2, 0, 0, 2, 60, -80);
+        }
+        #rotateX, #rotateY, #rotateZ {
+            background: grey;
+            border: none;
+        }
+        #rotateX:hover {
+            transform: rotateX(180deg);
+        }
+        #rotateY:hover {
+            transform: rotateY(140deg);
+        }
+        #rotateZ:hover {
+            transform: rotateZ(90deg);
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <div id="translate1"></div>
+    <div id="translate2"></div>
+    <div id="translate3"></div>
+    <div id="rotate1"></div>
+    <div id="rotate2"></div>
+    <div id="scale1"></div>
+    <div id="scale2"></div>
+    <div id="scale3"></div>
+    <div id="skew1"></div>
+    <div id="skew2"></div>
+    <div id="skew3"></div>
+    <div id="skew4"></div>
+    <div id="matrix">
+        <p>a = scaleX</p>
+        <p> b = skewY </p>
+        <p> c = skewX</p>
+        <p> d = scaleY</p>
+        <p>e = TransformX</p>
+        <p> f= TransformY</p>  </div>
+        <div id="rotateX"> rotateX</div>
+        <div id="rotateY">rotateY</div>
+        <div id="rotateZ">rotateZ</div>
+</body>
+</html>

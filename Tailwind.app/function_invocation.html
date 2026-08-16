@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Invvocation</title>
+</head>
+<body>
+     <p id="de1"></p>
+     <button onclick="sayHello()">Call without an Argument</button>
+    <p id="dem1"></p>
+    <p id="demo1"></p>
+    <p id="demon1"></p>
+    <p id="de2"></p>
+    <script type="text/javascript">
+// invoking with default parameters
+function sayHello(message = "Welcome! to the dungeon")  {
+alert(message); 
+}
+// with global object
+function addNumbers(a, b) {
+    return a + b;
+
+}
+document.getElementById("dem1").innerHTML = window.addNumbers(7, 9);
+// invoking function in an object 
+var car = {
+ brand: "BMW",
+ color:"red",
+ showInfo: function() {
+    return "The " + this.brand + " is " + this.color; 
+ }
+}
+document.getElementById("demo1").innerHTML = car.showInfo();
+    </script>
+</body>
+</html>

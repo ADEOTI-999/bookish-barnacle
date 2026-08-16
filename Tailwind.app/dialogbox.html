@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dialog box</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body>
+    <button
+      id="btn"
+      class="font-serif text-white bg-blue-600 text-3xl shadow-lg m-4 py-4 px-8 rounded-xl hover:w-64 hover:h-32 hover:bg-green-500 shadow-black"
+    >
+      Show a Dialog Box
+    </button>
+
+    <p id="demo">Hello world</p><br>
+
+    <button type="button" class="border-2 bg-gray-300" onclick="changecontent()"> Change Value </button><br><br>
+
+    <img src="../Project/hellcat.jpeg" id="img" alt="idk whats wrong"><br>
+
+<button type="button" class="border-2 bg-gray-300" onclick="changeimage()"> Change Image </button><br><br>
+
+<p id="demo2"> I AM THE BEST!</p>
+
+<button type="button" class="border-2 bg-gray-300" onclick="changestyle()"> Change Value </button><br><br>
+
+<div id="demo1" class="w-32 h-32 bg-yellow-500">
+  Nigggas are cool too
+</div>
+<button type="button" class="border-2 bg-gray-300" onclick="show()"> Show </button>
+
+<button type="button" class="border-2 bg-gray-300" onclick="hide()"> Hide </button><br><br>
+
+    <script type="text/javascript">
+      document.getElementById("btn").onclick = function () {
+        alert("EAT SHIT!");
+      }
+      function changecontent() {
+        document.getElementById("demo").innerHTML = "Hi Everyone";
+      }
+      function changeimage() {
+        document.getElementById("img").src = "../Project/race.JPG"
+      }
+      function  changestyle() {
+        document.getElementById("demo2").style.backgroundColor = "red";
+        document.getElementById("demo2").style.fontWeight = "bold";
+        document.getElementById("demo2").style.fontSize = "300%";
+      }
+      function show() {
+        document.getElementById("demo1").style.display = "block";
+      }
+      function hide() {
+        document.getElementById("demo1").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

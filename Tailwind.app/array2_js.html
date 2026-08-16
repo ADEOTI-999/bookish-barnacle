@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const names = ["Sasuke", "Naruto", "Hinata", "Sakura", "Tsunade","Jiraiya"]
+        names.forEach(function(val, i, arr) {
+            document.write(i + ": " + val +"<br><br>" )
+        });
+        // the seperator is in the parenthesis after join if nothing is specified they will be seperated by comma
+    const str = names.join(" ");
+    document.write(str+"<br>");
+    // split() method is used to convert string to arrays it takes the seperator in the string as ts argment then split the string at each point where the seperators occur
+    const string = "Tiana/ Lenny/Carvel/Bodies";
+    const arr = string.split("/");
+    document.write(typeof arr +":- " +arr+"<br>");
+    const games1 =["Football","Chess","Basketball","Tennis","Runnning"];
+    const games2 =["Handball","Volleyball","Baseball","Cycling","Checkers"];
+    const games3 =["Swimming","Boxing","Calisthencs","Skating"];
+const arr1 = games1.concat(games2,games3)
+    document.write(arr1+"<br>");
+    const hostels = ["Danfodio","Icsa/Ramat", "Dangote", "Danfodio","Queen_Amina", "Alex/Ribadu"];
+    const i = hostels.indexOf("danfodio");
+    document.write(i+"<br>");
+    const j = hostels.indexOf("Danfodio");
+    document.write(j+"<br>");
+    const k = hostels.lastIndexOf("Danfodio");
+    document.write(k+"<br>");
+    const m = hostels.includes("Suleiman");
+    document.write(m+"<br>");
+    const s = hostels.includes("Danfodio");
+    document.write(s+"<br>");
+    // if you notice the last index is "6" not "7"if i wrote "6" it won't bring the the "6"
+    const f = hostels.slice(3,7);
+    document.write(f+"<br>");
+    // splice is used to remove or replace one or more array item
+    names.splice(2,3, "Shikamaru", "Choji", "Kakashi");
+    document.write(names+"<br>");
+    names.splice(2,3);
+    document.write(names+"<br>");
+    // this is how to replace an array item
+    names[2] = "Sakura"
+    document.write(names+"<br>");
+
+
+    </script>
+</body>
+</html>

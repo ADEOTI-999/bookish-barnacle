@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date Get Methods</title>
+  </head>
+  <body>
+    <p>The number of milliseconds that has passed since Jan 1st 1970 is  <span id="de"></span></p>
+    <p>We are in <span id="dem"></span></p>
+    <p>The month's index is <span id="demo"></span></p>
+    <p> The day of the month is <span id="demon"></span></p>
+    <p>The day index of the week is <span id="de1"></span></p>
+   
+    <p> The current hour in the specified date is <span id="dem1"></span></p>
+     <p> The minutes in the specified date is <span id="demo1"></span></p>
+    <p> The seconds in the specified date is <span id="demon1"></span></p>
+    <p>The milliseconds in the specified date is <span id="de2"></span></p>
+    <p>The milliseconds elasped between Janruary 1, 1970 and September 19, 1996 is <span id="dem2"></span></p>
+    <p><span id="demo2"></span></p>
+    <p><span id="demon2"></span></p>
+
+    <script type="text/javascript">
+const now = Date.now();
+document.getElementById("de").innerHTML = now;
+// a gobal variable 
+const date = new Date ();
+
+const year = date.getFullYear();
+document.getElementById("dem").innerHTML = year;
+const month = date.getMonth();
+document.getElementById("demo").innerHTML = month;
+const day = date.getDate();
+document.getElementById("demon").innerHTML = day;
+
+const day2 = date.getDay();
+document.getElementById("de1").innerHTML = day2;
+const hours = date.getHours();
+document.getElementById("dem1").innerHTML = hours;
+const minutes = date.getMinutes();
+document.getElementById("demo1").innerHTML = minutes;
+const seconds = date.getSeconds();
+document.getElementById("demon1").innerHTML = seconds;
+const milliseconds = date.getMilliseconds();
+document.getElementById("de2").innerHTML = milliseconds;
+
+const date2 = new Date("September 19 1996");
+const elasped = date2.getTime(date2);
+document.getElementById("dem2").innerHTML = elasped;
+    </script>
+  </body>
+</html>

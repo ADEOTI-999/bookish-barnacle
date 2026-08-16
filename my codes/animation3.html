@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>words</title>
+    <style type="text/css">
+         div span::before {
+            content: "fool";
+            position: relative;
+            color: blue;
+            animation: words 10s 0.5s infinite  ;
+        }
+        @keyframes words {
+            from {
+              content: "fool";
+            }
+            to {
+                content: "idiot";
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        He is a <span> </span>
+    </div>
+</body>
+</html>

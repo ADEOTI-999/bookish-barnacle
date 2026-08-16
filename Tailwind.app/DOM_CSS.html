@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM CSS</title>
+   <link rel="stylesheet" href="output.css" />
+
+</head>
+<body>
+    <div class="rounded-2xl bg-blue-900 w-64 h-64 m-4" id="de"></div>
+    <button class="border bg-gray-300 rounded-sm p-1"  onclick="hide()">Hide</button>
+    <button class="border bg-gray-300 rounded-sm p-1"  onclick="show()">Show</button>
+ <script type="text/javascript">
+function hide() {
+    document.getElementById("de").style.display = "none";
+}
+function show() {
+    document.getElementById("de").style.display = "block";
+}
+ </script>
+</body>
+</html>

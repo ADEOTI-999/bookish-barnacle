@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+     <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+        #first {
+            padding: 15px;
+            width: 250px;
+            height: 100px;
+           
+            color: white;
+            background: wheat;
+            outline: none;
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+            
+        }
+        #first:focus {
+            background: white;
+            border: 3px solid  lightskyblue;
+            color: black;
+            border-radius: 15px;
+        }
+        #first:focus::placeholder {
+            color: aqua;
+        }
+        input[type="checkbox"], input[type="radio"] {
+            display: none;
+        }
+        label {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            border: 1px solid #0076ff;
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+        }
+        label > span {
+            display: inline-block;
+            border: 3px solid #0076ff;
+            border-radius: 50%;
+            margin-right: 30px;
+            height: 15px;
+            width: 15px;
+        }
+        input[type="checkbox"]:checked + label, input[type="radio"]:checked + label {
+            color: white;
+            background: #173459;
+        }
+        input[type="checkbox"]:checked + label > span, input[type="radio"]:checked + label > span {
+            background: #0076ff ;
+        }
+
+     </style>
+</head>
+<body>
+    <h1 style="color: rgb(240, 144, 18);">Car Rental</h1>
+    <form action="">
+        <h1>Which are you renting ?</h1>
+        <input type="radio" name="cars" value="Mercedes Benz" id="benz">
+        <label for="benz"><span></span> Mercedes Benz</label>
+
+        <input type="radio" name="cars" value="Ferrari" id="fari">
+        <label for="fari"><span></span> Ferrari</label>
+
+        <input type="radio" name="cars" value="Lamborghini" id="lambo">
+        <label for="lambo"><span></span>Lamborghini</label>
+
+        <input type="radio" name="cars" value="Bughatti" id="bugt">
+        <label for="bugt"><span></span> Bughatti </label>
+
+
+
+
+    </form>
+    <form action="">
+        <h1>Where are you going?</h1>
+
+
+          <input type="checkbox" name="state" value="Kaduna" id="kd">
+        <label for="kd"><span></span>Kaduna</label>
+
+        <input type="checkbox" name="state" value="Abuja" id="abj">
+        <label for="abj"><span></span> Abuja</label>
+
+        <input type="checkbox" name="state" value="Lagos" id="lg">
+        <label for="lg"><span></span>Lagos</label>
+
+        <input type="checkbox" name="state" value="Kano" id="kn">
+        <label for="kn"><span></span> Kano </label>
+    </form>
+    <br><br>
+
+    <p>Write a review about us</p>
+
+    <textarea name="sample" id="first" placeholder="Write your message..."></textarea>
+</body>
+</html>

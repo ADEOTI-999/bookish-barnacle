@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Break and Continue Statement</title>
+  </head>
+  <body>
+    <p id="de"></p>
+    <p id="dem"></p>
+    <p id="demo"></p>
+    <p id="demon"></p>
+    <p id="de1"></p>
+    <script type="text/javascript">
+      let html = "";
+      for (let i = 0; i < 10; i++) {
+        if (i == 7) {
+          break;
+        }
+        html += "<li> Number "+ i +"</li>";
+      }
+      document.getElementById("de").innerHTML = html;
+      let htm = "";
+      for (let i = 0; i < 10; i++) {
+        if (i == 7) {
+          continue;
+        }
+        htm += "<li> Number "+ i +"</li>";
+      }
+      document.getElementById("dem").innerHTML = htm;
+    </script>
+  </body>
+</html>

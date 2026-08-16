@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Object</title>
+</head>
+<body>
+        <p id="de"></p>
+    <p id="dem"></p>
+    <p id="demo"></p>
+    <p id="demon"></p>
+    <p id="de1"></p>
+    <p id="dem1"></p>
+    <p id="demo1"></p>
+    <button onclick="getRandomInt(6,13)"> get a random number between 6 and 12</button>
+    <p id="demon1"></p>
+    <button onclick="getRandomInte(6,13)"> get a random number between 6 and 13</button>
+
+    <p id="de2"></p>
+    <p id="dem2"></p>
+    <p id="demo2"></p>
+    <p id="demon2"></p>
+   <script type="text/javascript">
+    // rounds a number up to the nearest whole number or integer
+     const num1 = Math.ceil(3.90);
+     // rounds a number down to the nearest whole number or integer
+     const num2 = Math.floor(1.10);
+     document.getElementById("de").innerHTML = num1 + "<br>" + num2;
+     // rounds a number to the nearest whole number or integer
+     
+     const num3 = Math.round(3.75);
+     //  returns the square root of a number
+     const num4 = Math.sqrt(-9);
+     document.getElementById("dem").innerHTML = num3 + "<br>" + num4;
+     //  returns the cuberoot of a number
+     const num5 = Math.cbrt(27);
+     //  returns the absolute value of a number
+     const num6 = Math.abs(-2.5);
+     const num7 = Math.abs(2.5);
+     document.getElementById("demo").innerHTML = num5 + "<br>" + num6+"<br>"+num7;
+     //  returns the largest number in a given array
+     const num8 = Math.max(-7,-3,-2,-1,-1,1,2,3,7);
+     //  returns the lowest number in a given array
+     const num9 = Math.min(-7,-3,-2,-1,-1,1,2,3,7);
+     document.getElementById("demon").innerHTML = num8 + "<br>" + num9;
+     const nu1 = Math.pow(5, 3);
+     document.getElementById("de1").innerHTML = nu1;
+     //  to return a random floating number between 0 (included) and 1(excluded)
+     const random = Math.random()
+     document.getElementById("dem1").innerHTML = random;
+    //  maximum is excluded
+     function getRandomInt(min, max) {
+        document.getElementById("demo1").innerHTML = Math.floor(Math.random()*(max- min)) + min;
+     };
+     //  maximum included
+     function getRandomInte(min, max) {
+        document.getElementById("demon1").innerHTML = Math.floor(Math.random()*(max- min + 1)) + min;
+     };
+
+     
+
+
+
+
+
+     </script>
+</body>
+</html>

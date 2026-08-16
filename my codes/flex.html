@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style type="text/css">
+        #row-reverse {
+             flex-direction: row-reverse;
+        }
+         #nowrap {
+            flex-wrap: nowrap;
+        }
+        #wrap-reverse {
+            flex-flow: wrap-reverse row-reverse;
+        }
+       
+        .container {
+            display: flex;
+            padding: 10px;
+           
+            background-color: maroon;
+        }
+        .container > div {
+            width: 100px;
+            height: 100px;
+            background-color: coral;
+            margin: 5px;
+        }
+         .pagination {
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            border: 1px solid goldenrod;
+            border-radius: 5px;
+        }
+        .pagination li {
+            display: inline;
+        }
+        .pagination a {
+            text-decoration: none;
+            color: black;
+            padding: 7px 14px;
+            float: left;
+            border-right: 1px solid goldenrod;
+            transition-duration: 1s;
+            font-size: 20px;
+
+        }
+        .pagination a:hover {
+            color: white;
+            background: goldenrod;
+        }
+        .pagination li:last-child > a {
+            border: none;
+        }
+        .pagination-container {
+            text-align: center;
+        }
+        .active {
+            color: white !important;
+            background: #daa520;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="row-reverse">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+        <div class="box">11</div>
+        <div class="box">12</div>
+        <div class="box">13</div>
+
+
+
+    </div>
+    <div class="container" id="nowrap">
+          <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+        <div class="box">11</div>
+        <div class="box">12</div>
+        <div class="box">13</div>
+
+    </div>
+    <div class="container" id="wrap-reverse">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+        <div class="box">11</div>
+        <div class="box">12</div>
+        <div class="box">13</div>
+    </div>
+    <div class="pagination-container">
+        <ul class="pagination">
+        <li><a href="#">&lt;</a></li>
+         <li><a href="Pagination.html">1</a></li>
+          <li><a href="flex.html" class="active">2</a></li>
+           <li><a href="flexbox_align_content.html">3</a></li>
+            <li><a href="flexbox_align_items.html">4</a></li>
+             <li><a href="flexboxjustify.html">5</a></li>
+              <li><a href="#">&gt;</a></li>
+    </ul>
+    </div>
+</body>
+</html>

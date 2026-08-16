@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../output.css" />
+    <title>Weather</title>
+  </head>
+  <body class="bg-gray-900 font-serif">
+    <div
+      class="w-3/4 text-white rounded-xl text-center bg-linear-to-br from-blue-500 via-purple-500 to-red-500 my-[100px] mx-auto max-w-[470px] py-10 px-9"
+    >
+      <div class="w-full flex items-center justify-between" id="search">
+        <input
+          class="bg-yellow-100 py-3 px-6 h-13 w-3/4 rounded-4xl outline-none text-black text-base"
+          type="text"
+          placeholder="enter city name "
+          spellcheck="false"
+        />
+        <button
+          class="cursor-pointer flex p-4 justify-center bg-yellow-100 rounded-full align-right h-15 w-15"
+        >
+          <img
+            src="/Project/search_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.png"
+          />
+        </button>
+      </div>
+      <div class="text-left ml-2 text-sm mt-2 hidden" id="error">
+        <p>Invalid city name</p>
+      </div>
+      <div class="hidden font-bold align-center justify-between" id="weather">
+        <img src="cloudy.png" id="weaticon" class="m-auto mt-7" />
+        <h1 class="text-4xl font-black" id="temp">22⁰c</h1>
+        <h2 class="text-2xl -mt-2 font-bold" id="city">New York</h2>
+        <div class="flex items-center justify-between px-5 mt-12">
+          <div class="flex align-center text-left">
+            <img src="humidity.png" class="w-10 mr-2" />
+            <div>
+              <p class="text-3xl -mt-1" id="humid">50%</p>
+              <p>Humidity</p>
+            </div>
+          </div>
+          <div class="flex align-center text-left">
+            <img src="windy.png" class="w-10 mr-2" />
+            <div>
+              <p class="text-3xl -mt-1" id="wind">15 km/h</p>
+              <p>Wind Speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      const apiKey = "6d5bc7c3d51f295ec644af9cc7bdc73b";
+      const apiUrl =
+        "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+      const searchBox = document.querySelector("#search input");
+      const searchBtn = document.querySelector("#search button");
+      const weatherIcon = document.querySelector("#weaticon");
+
+      async function checkWeather(city) {
+        const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
+
+        if (response.status == 404 ) {
+          document.querySelector("#error").style.display = "block";
+          document.querySelector("#weather").style.display = "none";
+        } else {
+          var data = await response.json();
+
+          document.querySelector("#city").innerHTML = data.name;
+          document.querySelector("#temp").innerHTML =
+            Math.round(data.main.temp) + "⁰c";
+          document.querySelector("#humid").innerHTML = data.main.humidity + "%";
+          document.querySelector("#wind").innerHTML = data.wind.speed + "km/h";
+
+          if (data.weather[0].main == "Clouds") {
+            weatherIcon.src = "cloudy.png";
+          } else if (data.weather[0].main == "Clear") {
+            weatherIcon.src = "sunny.png";
+          } else if (data.weather[0].main == "Drizzle") {
+            weatherIcon.src = "drizzle.png";
+          } else if (data.weather[0].main == "Rain") {
+            weatherIcon.src = "rainy.png";
+          } else if (data.weather[0].main == "Mist") {
+            weatherIcon.src = "mist.png";
+          }
+          document.querySelector("#weather").style.display = "block";
+          document.querySelector("#error").style.display = "none";
+        }
+      }
+
+      searchBtn.addEventListener("click",()=> {
+        checkWeather(searchBox.value);
+      });
+    </script>
+  </body>
+</html>

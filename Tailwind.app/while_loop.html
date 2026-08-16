@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While loop</title>
+</head>
+<body>
+    <p id="dem"></p>
+    <script type="text/javascript">
+         // while loop
+      const cars = ["Benz", "Porche", "Ferrari", "Mustang", "Dodge"];
+      const lent = cars.length;
+      let i = 0;
+      let htm = "";
+      while (i < lent) {
+        htm += "<p> I bought the " + cars[i] + " last year </p>";
+        i++;
+      }
+      document.getElementById("dem").innerHTML = htm;
+    </script>
+</body>
+</html>

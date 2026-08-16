@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+  </head>
+  <body>
+    <h1>A Header</h1>
+    <h1 id="hate">Another Header</h1>
+    <p>
+      <label> First Name: <input type="text" name="firstName" /></label>
+    </p>
+    <p>
+      <label> Last Name: <input type="text" name="lastName" /></label>
+    </p>
+    <button onclick="getValue()">Get the Value</button>
+    <p>A Paragrah</p>
+    <p>First Paragraph</p>
+    <p class="among">Second Paragraph</p>
+    <p>Third Paragraph</p>
+    <p class="among">Fourth Paragraph</p>
+    <script type="text/javascript">
+      alert(document.documentElement.getAttribute("lang"));
+      alert(document.head.lastElementChild.innerHTML);
+      document.body.style.backgroundColor = "gold";
+      const elements = document.getElementsByClassName("among");
+
+      for (let i = 0; i < elements.length; i++) {
+        elements[i].style.fontSize = "30px";
+        elements[i].style.color = "white";
+      }
+      const tags = document.getElementsByTagName("h1");
+
+      for (let i = 0; i < tags.length; i++) {
+        tags[i].style.fontFamily = "cursive";
+        tags[i].style.backgroundColor = "orange";
+      }
+      function getValue() {
+        const firstName = document.getElementsByName("firstName")[0].value;
+        const lastName = document.getElementsByName("lastName")[0].value;
+        const fullName = "Your full Name is " + firstName+ " " + lastName; 
+alert(fullName);
+      };
+      const item = document.querySelectorAll("#hate");
+      for ( let i = 0; i < item.length ; i++) {
+        item[i].style.textAlign = "center";
+      }
+    </script>
+  </body>
+</html>

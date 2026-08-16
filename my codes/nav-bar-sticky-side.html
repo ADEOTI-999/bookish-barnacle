@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+     <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+        html,body {
+            margin: 0;
+            padding: 0;
+        }
+        .nav-bar {
+            background: silver;
+            top: 0;
+            left: 0;
+            overflow-y: auto;
+            position: fixed;
+            width: 30%;
+            height: 100%;
+        }
+        .nav-bar li{
+            border-bottom: 2px solid;
+
+        }
+        .nav-bar li:last-child{
+            border: none;
+
+        }
+        .nav-bar > ul > li > a {
+            padding: 10px;
+            background: silver;
+        } 
+        .nav-bar > ul > li > a:hover {
+            background: grey;
+            color: white;
+        }
+        .nav-bar .active {
+            background: gray;
+            color: white;
+
+        }
+        .nav-bar > ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        .nav-bar a {
+            display: block;
+            text-decoration: none;
+            color: darkslategrey;
+
+        }
+        .content {
+            width: 70%;
+            margin-left: 30%;
+            padding: 15px;
+        }
+        .content > div {
+           
+            height: 1000px;
+            background: lime;
+        }
+
+     </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+             <li><a href="#">Services</a></li>
+              <li><a href="#">About</a></li>
+               <li><a href="#">Gallery</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, ad. Rerum, beatae. Molestias tempore labore in saepe distinctio exercitationem, iure laborum sequi eveniet voluptate soluta provident, reprehenderit impedit sit corporis.</p>
+        <div></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class function</title>
+  </head>
+  <body>
+    <p id="de1"></p>
+    <p id="dem1"></p>
+    <p id="demo1"></p>
+    <p id="demon1"></p>
+    <p id="de2"></p>
+    <p id="dem2"></p>
+    <p id="demo2"></p>
+    <script type="text/javascript">
+      class Car {
+        constructor(carColor, carName) {
+          this.color = carColor;
+          this.name = carName;
+          this.horsepower = "7000hp";
+        }
+      }
+      const car = new Car("Black", "BMW");
+      document.getElementById("de1").innerHTML =
+        "A " +
+        car.name +
+        " just zoomed by, with about " +
+        car.horsepower +
+        " <br> What color was it ? <br>  It was " +
+        car.color;
+        // addding a method, mind you can also add a parameter
+        class Cars {
+          constructor(carsColor, carsName) {
+            this.color = carsColor;
+            this.name = carsName;
+            this.horsepower = "8500hp";
+          }
+        }
+        const cars = new Cars("Grey", "Mercedes Benz");
+        document.getElementById("de2").innerHTML =
+          "A " +
+          cars.name +
+          " just zoomed by, with about " +
+          cars.horsepower +
+          " <br> What color was it ? <br>  It was " +
+          cars.color;
+          // static methods called without initiating the class
+          class Bike {
+          constructor(bikeColor, bikeName) {
+            this.color = bikeColor;
+            this.name = bikeName;
+            this.horsepower = "2000hp";
+          }
+           static sayHello (text) {
+          return text;
+        }
+        }
+       document.getElementById("dem2").innerHTML = Bike.sayHello("Hello bike ?")
+// Class inheritance a class inherit properties and method of another class
+class Animal {
+  constructor(animalName) {
+    this.name = animalName;
+
+  }
+  swims() {
+    return this.name +" swims";
+  }
+}
+
+class Leopard extends Animal {
+  constructor(animalName) {
+    super(animalName);
+
+  }
+
+  climbs() {
+    return this.name + " climbs";
+  }
+}
+const leopard = new Leopard("Kitty");
+document.getElementById("demo2").innerHTML = leopard.swims() + " and " + leopard.climbs();
+    </script>
+  </body>
+</html>

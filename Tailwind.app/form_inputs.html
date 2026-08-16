@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Inputs</title>
+</head>
+<body>
+    <form action="#">
+        <input type="text" name="firstName" >
+        <button type="button" onclick="getValue()"> Tell me</button>
+    </form><br><br>
+
+    <form action="#">
+       <label> User Name:  <input type="text" name="userName" ></label>
+       <button onclick="return validateForm()"> Submit</button>
+    </form>
+    <br><br>
+
+     <form action="#">
+       <label> Age: <input type="text" name="age" ></label>
+       <button onclick="return validForm()"> Submit</button>
+    </form>
+    <br><br>
+    <h3>HTML5 Attributes</h3>
+    <form action="#">
+       <label> First Name:  <input type="text" name="userName" required></label>
+       <button> Submit</button>
+    </form>
+    <br><br>
+
+     <form action="#">
+       <label> Age: <input type="number" name="age" min="18" max="35" required></label>
+       <button> Submit</button>
+    </form>
+    <script>
+        function getValue() {
+            const val = document.getElementsByName("firstName")[0].value;
+            alert("The value is " + val);
+        }
+
+        function validateForm() {
+            const userName = document.getElementsByName("userName")[0].value;
+            const length = userName.length;
+            if (length > 10) {
+                 alert("The input must not exceed 10 characters!");
+            return false;
+        }
+        }
+        function validForm() {
+            const age = document.getElementsByName("age")[0].value;
+           
+            if (age < 18) {
+                 alert("You must be above 18 to enter this website!");
+            return false;
+        }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation2</title>
+    <style type="text/css">
+        @keyframes forward {
+            from {
+                color: aquamarine;
+                font-size: 15px;
+
+            }
+            to {
+                 color: red;
+                font-size: 40px;
+            }
+
+        }
+         @keyframes backward {
+            from {
+                color: aquamarine;
+                font-size: 15px;
+                left: 0px;
+
+            }
+            to {
+                 color: red;
+                font-size: 40px;
+                margin-left: 50px;
+            }
+
+        }
+             @keyframes both {
+            from {
+                color: aquamarine;
+                font-size: 15px;
+
+            }
+            to {
+                 color: red;
+                font-size: 40px;
+            }
+
+        }
+
+        #bac {
+            animation: backward 5s 1s backwards;
+            
+        }
+
+        #for {
+            animation: forward 2s 3s forwards;
+           
+        }
+        #both {
+            animation: both 3s 5s both;
+            
+        }
+    </style>
+</head>
+<body>
+    <p id="for">Forwards</p>
+    <p id="bac">Backwards</p>
+    <div id="both">Forward and Backward</div>
+</body>
+</html>

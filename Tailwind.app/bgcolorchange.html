@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+   <div onclick="changeColor(this)" class="h-64 w-64 text-center text-xl text-white pl-5 pr-5 bg-red-700">
+tap and see magic
+   </div>
+   <script type="text/javascript">
+    function changeColor(element) {
+        const currentColor = element.style.backgroundColor;
+        if (currentColor == "red") {
+            element.style.backgroundColor = "green";
+
+        } else {
+              element.style.backgroundColor = "red";
+        }
+    }
+
+   </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox Align Content</title>
+    <style type="text/css">
+         .container {
+            display: flex;
+            padding: 5px;
+            background: maroon;
+            height: 400px;
+            flex-wrap: wrap;
+        }
+        .container > div {
+            width: 200px;
+            line-height: 80px;
+            text-align: center;
+            margin: 5px;
+             background: coral;
+        }
+   
+     #flex-start {
+align-content: flex-start;
+        }
+        #flex-end {
+            align-content: flex-end;
+        }
+        #center {
+align-content: center;
+        }
+        #stretch {
+            align-content: stretch;
+        }
+         #space-between {
+           align-content: space-between;
+        }
+        #space-around {
+           align-content: space-around;
+        }
+        #space-evenly {
+           align-content: space-evenly;
+        }
+    </style>
+
+</head>
+<body><p>flex-start</p>
+    <div class="container" id="flex-start"> 
+        <div style="order: 3;">1</div>
+        <div style="order: 4;">2</div>
+        <div style="order: 5;">3</div>
+          <div style="order: 6;">4</div>
+        <div style="order: 1;">5</div>
+        <div style="order: 2;">6</div>
+    </div><p>flex-end</p>
+    <div class="container" id="flex-end"> 
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+          <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div><p>center</p>
+     <div class="container" id="center"> 
+       <div>1</div>
+        <div>2</div>
+        <div>3</div>
+          <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div><p>stretch</p>
+    <div class="container" id="stretch"> 
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+          <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div><p>space-around</p>
+    <div class="container" id="space-around"> 
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+          <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div><br>
+    <p>space-betwee,</p>
+    <div class="container" id="space-between"> 
+<div>1</div>
+        <div>2</div>
+        <div>3</div>
+          <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div><br>
+    <p>space-evenly</p>
+    <div class="container" id="space-evenly"> 
+         <div>1</div>
+        <div>2</div>
+        <div>3</div>
+          <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div><br>
+</body>
+</html>

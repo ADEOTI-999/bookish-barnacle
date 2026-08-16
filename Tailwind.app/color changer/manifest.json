@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Colour Changer",
+  "version": "1.0",
+  "description": "Changes the backgrond colour of any page",
+  "action": {
+    "default_popup": "extension.html"
+  },
+  "permissions": ["activeTab", "scripting"]
+}

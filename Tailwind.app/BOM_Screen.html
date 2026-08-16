@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p>The Width of the screen is:  <span id="de1"></span></p>
+   <p>Available horizontal space of the screen: <span id="dem1"></span></p> 
+   <p>Height of the screen :<span id="demo1"></span></p> 
+   <p> Available vertical space of the screen: <span id="demon1"></span></p>
+   <p>Orientation of the screen:  <span id="de2"></span></p>
+   <p>Bit or Pixel depth f the screen: <span id="dem2"></span></p>
+   <p>Color depth of the screen: <span id="demo2"></span></p> 
+    <script type="text/javascript">
+        document.getElementById("de1").innerHTML = screen.width;
+        document.getElementById("dem1").innerHTML = screen.availWidth;
+        document.getElementById("demo1").innerHTML = screen.height;
+        document.getElementById("demon1").innerHTML = screen.availHeight;
+        document.getElementById("de2").innerHTML = screen.orientation.type;
+        document.getElementById("dem2").innerHTML = screen.pixelDepth;
+        document.getElementById("demo2").innerHTML = screen.colorDepth;
+    </script>
+</body>
+</html>

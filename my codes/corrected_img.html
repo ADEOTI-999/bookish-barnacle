@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Images</title>
+    <style type="text/css">
+       div.container {
+            position: relative;
+        }
+        /*opacity range from 0.0 to 1.0 */
+        img {
+            height: 200px;
+            width: 100%;
+        }
+        
+      #b1 {
+          border-radius: 50%;
+         opacity: 0.7; 
+         }
+         
+         #first {
+             position: absolute;
+             top: 50%;
+             right: 30%;
+      transform: translate(-50%, -50%);
+       font-size: 20px;
+         }
+                     
+      #b2 {
+          border-radius: 10px;
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+            opacity: 0.5;
+      }
+      
+     #second {
+             position: absolute;
+             top: 2px;
+             left: 8px;
+            }
+         
+      #b3 {
+          border: 1px solid #0003ff;
+          padding: 5px;
+          border-radius: 10px;
+      } 
+      #third {
+             position: absolute;
+             top: 2px;
+             right: 1px;             
+         }
+      
+      #b4 {
+          height: auto;
+          max-width: 100%;
+          opacity: 0.7;
+      }
+      
+      #fourth {
+             position: absolute;
+             right: 8px;
+             bottom: 5px;
+         }
+           #b5{
+               opacity: 0.4;
+           }
+            #fifth {
+                position: absolute;
+             left: 8px;
+             bottom: 5px
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <img src="sea.jpg" id="b1">
+    <span id="first">I made the text centered</span>
+    </div>
+    
+    <div class="container">
+<img src="nebula.jpg" id="b2">
+<span id="second">This image is centered</span>
+</div>
+
+<div class="container">
+<img src="sea.jpg" id="b3">
+<span id="third">Thumbnail</span>
+</div>
+
+<div class="container">
+<img src="nebula.jpg" id="b4">
+<span id="fourth">Responsive</span>
+</div>
+
+<div class="container">
+<img src="nebula.jpg" id="b5">
+<span id="fifth">Normal for now</span>
+</div>
+
+
+</body>
+</html>

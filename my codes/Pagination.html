@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination</title>
+    <style type="text/css">
+        .pagination {
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            border: 1px solid goldenrod;
+            border-radius: 5px;
+        }
+        .pagination li {
+            display: inline;
+        }
+        .pagination a {
+            text-decoration: none;
+            color: black;
+            padding: 7px 14px;
+            float: left;
+            border-right: 1px solid goldenrod;
+            transition-duration: 1s;
+            font-size: 20px;
+
+        }
+        .pagination a:hover {
+            color: white;
+            background: goldenrod;
+        }
+        .pagination li:last-child > a {
+            border: none;
+        }
+        .pagination-container {
+            text-align: center;
+        }
+        .active {
+            color: white !important;
+            background: #daa520;
+        }
+    </style>
+</head>
+<body>
+    <div class="pagination-container">
+        <ul class="pagination">
+        <li><a href="#">&lt;</a></li>
+         <li><a href="#" class="active">1</a></li>
+          <li><a href="flex.html">2</a></li>
+           <li><a href="flexbox_align_content.html">3</a></li>
+            <li><a href="flexbox_align_items.html">4</a></li>
+             <li><a href="flexboxjustify.html">5</a></li>
+              <li><a href="#">&gt;</a></li>
+    </ul>
+    </div>
+</body>
+</html>

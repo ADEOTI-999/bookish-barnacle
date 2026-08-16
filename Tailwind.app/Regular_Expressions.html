@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expressions</title>
+</head>
+<body>
+    <script type="text/javascript">
+        const text = "I hate dogs";
+        const search = text.search(/dOgS/i);
+        document.write(search+"<br>");
+
+        const text2 = "She was riding a lamborghini, amd  she got hit by a  lamborghini";
+        const search2 = text2.replace(/lAmBorgHini/gi, "Ferrari");
+        document.write(search2);
+
+    </script>
+</body>
+</html>

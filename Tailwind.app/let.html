@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let Statement</title>
+</head>
+<body>
+  
+    <button onclick="varTest()"> Call varTest</button>
+    <button onclick="letTest()"> Call letTest </button>
+      <p id="dem1"></p>
+    <p id="demo1"></p>
+    <p id="demon1"></p>
+    <p id="de2"></p>
+    <p id="dem2"></p>
+    <script type="text/javascript">
+        function varTest() {
+            var x = 5;
+            {
+                var x = 10;
+                alert(x)
+            }
+            alert(x);
+        }
+
+        function letTest() {
+            let x = 5;
+            {
+                let x = 10;
+                alert(x);
+            }
+            alert(x);
+        }
+        var num = 10;
+        for(var num = 0; num < 15; num++) {
+
+        }
+        document.getElementById("dem1").innerHTML = num;
+
+        var num = 10;
+        for(let num = 0; num < 15; num++) {
+
+        }
+        document.getElementById("demo1").innerHTML = num;
+
+        var car = "benz";
+        document.getElementById("demon1").innerHTML = window.car;
+
+        let reloj = "poedagar";
+        document.getElementById("de2").innerHTML = window.reloj;
+// variable declared with let are not hoisted to the top
+        course = "phch";
+        document.write(course);
+        let course;
+       
+    </script>
+</body>
+</html>

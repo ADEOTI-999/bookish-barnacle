@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <button id="btn"> Click me </button><br><br>
+    <button onclick='alert("Go slow and steady")'> See more </button><br><br>
+    <button id="btt"> Important info </button><br><br>
+    <label> Choose your favorite department
+        <select name="department" id="dment">
+            <option value="Pharmaceutical chemistry">PHCH </option>
+            <option value="Pharmacology">PHCL</option>
+            <option value="Pharmaceutical Microbiology">PHMB</option>
+            <option value="Clinical Pharmacy">PHCP </option>
+            <option value="Industrial Pharmacy">PHCT</option>
+            <option value="Pharmacognosy">PHCG</option>
+
+        </select>
+    </label>
+    <p>Your favorite department is: <span id="demo"> 
+</span></p>
+<p id="demo1">Come and hear</p>
+
+  <!--keypress events-->
+  <textarea id="tarea"></textarea>
+  <p>The value is: <span id="demo2"></span></p>
+
+  <textarea id="trea">Type your message here...</textarea>
+  <p> Window Width is <span id="winWidth"></span></p>
+  <p> Window Height is <span id="winHeight"></span></p>
+  
+    <script type="text/javascript"> 
+        const btn = document.getElementById("btn");
+        btn.onclick = function() {
+            alert("Go To Hell")
+        };
+        //addEventListener(eventType, listenerFunction)
+         const btt = document.getElementById("btt");
+         btt.addEventListener("click", function() {
+            alert("You need to be obsessed with the goal")
+         });
+
+const select = document.getElementById("dment");
+select.addEventListener("change",function() {
+    const val = document.getElementById("dment"). value;
+    document.getElementById("demo").innerHTML = val;
+})
+const elem = document.getElementById("demo1");
+elem.addEventListener("mouseover", function(){
+    elem.innerHTML = "Are you better than yesterday ?";
+})
+const area = document.getElementById("tarea");
+
+area.addEventListener("keypress", function() {
+    document.getElementById("demo2").innerHTML = area.value;
+});
+const farea = document.getElementById("trea");
+
+farea.addEventListener("focus", function() {
+   farea.style.background = "red";
+   farea.style.color = "white";
+});
+
+farea.addEventListener("blur", function() {
+   farea.style.background = "white";
+   farea.style.color = "black";
+});
+window.addEventListener("resize", function() {
+    document.getElementById("winWidth").innerHTML = window.innerWidth;
+document.getElementById("winHeight").innerHTML = window.innerHeight;
+})
+    </script>
+</body>
+</html>

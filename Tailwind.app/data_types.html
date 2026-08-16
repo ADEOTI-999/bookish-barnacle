@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+</head>
+<body>
+    <!--BOOLEAN-->
+    <p id="de"></p>
+    <p id="dem"></p>
+    <p id="demo"></p>
+    <script type="text/javascript">
+const x = 4;
+const y = 3;
+const areTheyEqual = (x==y);
+document.getElementById("de").innerHTML = areTheyEqual;
+
+ const car = {
+    condition: "Magnificent",
+    color:"blue",
+    brand:"Toyota",
+    quantity:"17",
+    isExpensive:"true",
+ }
+ document.getElementById("dem").innerHTML = 
+ "car <br>" +
+ "What type is it?       It's a: "+car.brand+". <br>" + "It's: "+car.color+".<br>"+"They are: "+car.quantity+". <br>" +"How does the ride feel?: "+car.condition+".<br>" +"I heard its expensive: "+car.isExpensive+ ".<br>"    
+ const watches = ["Cartier", "Rolex", "Poedagar"];
+ document.getElementById("demo").innerHTML = watches[0] +" "+watches[1]+" "+watches[2];
+
+ let color = "green";
+ document.write(color+ "<br>");
+
+color = null;
+document.write(color);
+
+ 
+ </script>
+</body>
+</html>

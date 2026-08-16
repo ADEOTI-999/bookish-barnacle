@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM Window</title>
+</head>
+<body>
+    <p id="de"></p>
+    <script type="text/javascript">
+        var txt = "Hello World!";
+        function sayHello() {
+            document.write(window.txt);
+        }
+        window.sayHello();
+
+        const wid = window.innerWidth; 
+        const hgt = window.innerHeight; 
+        document.getElementById("de").innerHTML = "Width: " +wid+ " Height: "+hgt;
+    </script>
+</body>
+</html>

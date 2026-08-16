@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion</title>
+      <style type="text/css">
+        * {
+          box-sizing: border-box;
+        }
+        body, html {
+          margin: 0;
+          padding: 0;
+        }
+        .container {
+          margin: 15px;
+          border-radius: 5px;
+          border: 1px solid black;
+        }
+        input[type="radio"] {
+          display: none;
+        }
+        label{
+          display: block;
+          padding: 10px;
+          border-bottom: 1px solid black;
+          color: white;
+          z-index: 2;
+          background: olive;
+        }
+        .acccordion-content {
+          border-bottom: 1px solid black;
+          padding: 0px;
+          opacity: 0;
+          max-height: 0;
+          overflow: hidden;
+          z-index: -1;
+          transition: 0.5s linear;
+         
+        }
+
+        .accordion:last-child > label, .accordion:last-child > .acccordion-content {
+          border: none;
+
+        }
+
+        input:checked ~ .acccordion-content {
+          padding: 15px;
+          opacity: 1;
+          max-height: 500px;
+          z-index: 1;
+        }
+
+      </style>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="accordion">
+        <input type="radio" name="accordion" checked id="accordion1">
+        <label for="accordion1"> » Accordion #1</label>
+        <div class="acccordion-content">
+          Lorem ipsum dolor sit ameatibus aperiam laudantium rerum assumenda error nostrum.
+        </div>
+      </div>
+
+       <div class="accordion">
+        <input type="radio" name="accordion" id="accordion2">
+        <label for="accordion2"> » Accordion #2</label>
+        <div class="acccordion-content">
+          Lorem ipsum dolor sit ameatibus aperiam laudantium rerum assumenda error nostrum.
+        </div>
+      </div>
+
+       <div class="accordion">
+        <input type="radio" name="accordion" id="accordion3">
+        <label for="accordion3"> » Accordion #3</label>
+        <div class="acccordion-content">
+          Lorem ipsum dolor sit ameatibus aperiam laudantium rerum assumenda error nostrum.
+        </div>
+      </div>
+
+       <div class="accordion">
+        <input type="radio" name="accordion" id="accordion4">
+        <label for="accordion4"> » Accordion #4</label>
+        <div class="acccordion-content">
+          Lorem ipsum dolor sit ameatibus aperiam laudantium rerum assumenda error nostrum.
+        </div>
+      </div>
+
+      
+
+
+
+
+
+    </div>
+  </body>
+</html>

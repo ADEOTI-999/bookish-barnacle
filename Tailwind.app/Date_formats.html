@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Formats</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // leading zeros added to avoid zeros on some browsers
+// short date MM/DD/YYYY
+const date = new Date("05/06/2004");
+document.write(date+"<br>")
+// long date
+const date1 = new Date("19 Jan 2019 ");
+document.write(date1+"<br>")
+const date2 = new Date("29 February 2016 ");
+document.write(date2+"<br>")
+// ISO date YYYY/MM/DD
+const date3 = new Date("2026-07-17");
+document.write(date3+"<br>")
+const date4 = new Date("2026-07-17T00:00+06:00");
+document.write(date4+"<br>")
+
+    </script>
+</body>
+</html>

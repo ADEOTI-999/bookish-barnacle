@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strict Mode</title>
+  </head>
+  <body>
+    <p id="dem1"></p>
+    <p id="demo1"></p>
+    <p id="demon1"></p>
+    <p id="de2"></p>
+    <p id="dem2"></p>
+    <script type="text/javascript">
+      //   "use strict";
+        try {
+          fruit = "peach";
+          document.write(fruit);
+        } catch (err) {
+          document.write(err);
+        }
+        myVariable ="How far ?" //wont cause an error
+      function myFunc() {
+          "use strict";
+       reloj = "ORIS";
+       alert(reloj);
+      }
+      try {
+         myFunc();
+        } catch (err) {
+          document.write(err);
+        }
+
+        // function(x, x, y) {
+          "use strict"
+          alert(x + x + y);
+        // }
+        // var sum = 02 + 3;
+
+        alert(sum);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exception Handling</title>
+  </head>
+  <body>
+    <p id="de"></p>
+    <p id="dem"></p>
+    <label for="#"> Age: <input type="number" id="age" /> </label>
+    <button type="button" id="submit">Submit</button>
+    <p id="demo"></p>
+    <p id="demon"> Name: <span id="name"></span></p>
+    <p id="de1">Message: <span id="message"></span></p>
+    <p id="dem1"></p>
+    <p id="demo1"></p>
+    <p id="demon1"></p>
+    <p id="de2"></p>
+    <p id="dem2"></p>
+    <p id="demo2"></p>
+    <p id="demon2"></p>
+    <script type="text/javascript">
+      try {
+        myFuction();
+      } catch (err) {
+        document.getElementById("de").innerHTML = err;
+      }
+      try {
+        throw "An error has occured, please fix it";
+      } catch (err) {
+        document.getElementById("dem").innerHTML = err;
+       } finally {
+        alert("Hi Winner");
+      }
+      // Illustration
+      const submit = document.getElementById("submit");
+      submit.onclick = function () {
+        const age = parseInt(document.getElementById("age").value);
+        try {
+          if (age < 18) {
+            throw "User must be 18 or above to enter";
+          } else {
+            document.getElementById("demo").innerHTML = "User is 18 or above";
+          }
+        } catch (err) {
+          document.getElementById("demo").innerHTML = err;
+        }
+      };
+      // RangeError
+      const number = 32.678;
+      try {
+        number.toExponential(-2);
+
+      } catch (err) {
+        document.getElementById("name").innerHTML = err.name;
+        document.getElementById("message").innerHTML = err.message;
+      }
+    </script>
+  </body>
+</html>

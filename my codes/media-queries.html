@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive</title>
+    <style type="text/css">
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      header,
+      footer {
+        text-align: center;
+        padding: 15px;
+        background: olive;
+      }
+      @media only screen and (max-width: 768px) {
+        .row > div {
+          grid-column: span 3;
+        }
+        .aside {
+          display: block;
+        }
+      }
+      @media only screen and (min-width: 768px) {
+        .aside {
+          grid-column: span 3;
+          display: flex;
+          justify-content: space-between;
+        }
+        .nav {
+          grid-column: span 1;
+        }
+        .intro {
+          grid-column: span 2;
+        }
+      }
+
+      .nav {
+        margin: 5px;
+      }
+      .nav > ul > li > a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .intro {
+        text-align: center;
+
+        margin: 5px;
+      }
+      .nav > ul > li:hover {
+        text-decoration: underline whitesmoke;
+        font-size: 1.5rem;
+        
+      }
+      .nav > ul > li > a:hover {
+        color: white;
+      }
+
+      .nav > ul > li {
+        list-style-type: none;
+
+        transition: 0.5s;
+        width: 80%;
+        background: olivedrab;
+        padding: 10px;
+        margin: 2px;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        margin: 20px;
+      }
+      .aside > p {
+        text-align: center;
+      }
+      .aside > h3 {
+        text-align: center;
+        text-decoration: underline;
+      }
+      .aside {
+        border: 1px solid black;
+        border-radius: 5px;
+
+        margin: 10px;
+        background: lightskyblue;
+        padding: 10px;
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>Company Limited</h2>
+    </header>
+    <div class="row">
+      <div class="nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="intro">
+        <h4>Why you should invest here ?</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus maxime
+          vitae illo perferendis dicta consequatur eveniet atque molestias
+          perspiciatis odit autem, possimus debitis accusamus nemo earum totam,
+          adipisci, molestiae aspernatur.
+        </p>
+      </div>
+      <div class="aside">
+        <h3>Our company</h3>
+        <img src="chain2.jpg" alt="" />
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elia repellat
+          voluptates quia unde iusto. Porro!
+        </p><hr>
+        <h3>Our workers</h3>
+        <img src="car2.jpg" alt="" />
+        <p>
+          orem ipsum dolor, sit amet consectetur adipisicing elia repellat
+          voluptates quia unde iusto. Porro
+        </p>
+      </div>
+    </div>
+    <footer>
+      <h2>About Company Limited</h2>
+      <p>
+        orem ipsum dolor, sit amet consectetur adipisicing elia repellat
+        voluptates quia unde iusto. Porro
+      </p>
+    </footer>
+  </body>
+</html>

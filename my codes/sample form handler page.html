@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms</title>
+        <style type="text/css">
+            label {
+                background: #ffe715;
+                color: #0018ff;
+                border: 1px inset #ff0073;
+                border-radius: 5px;
+                padding-right: 4px;
+                padding-left: 4px;
+                margin-right: 3px;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="sample-form-page-handler.html"method="GET">
+            <input type="text" name="fullname" placeholder="Fullname"><br>
+            <input type="text" name="age" placeholder="Age"><br>
+            <input type="text" name="favourite_color" placeholder="Favorite color"><br>
+            <input type="text" name="occupation"
+           placeholder="Occupation"><br>
+          
+           <input type="submit"><br>
+           <br> <label for="demo"> Head Size: </label>
+       <input type="text" id="demo">
+        </form><br>
+        <input type="text" id="val"><br>
+        <button onclick="getValue()">Get Value</button>
+        <script type="text/javascript">
+            function getValue() {
+          alert(document.getElementById('val').value);
+       } </script><br><br>
+       <input type="checkbox" id="box"><br>
+       <button onclick="get()">Get value</button>
+       <script type="text/javascript">
+           function get() {
+               alert(document.getElementById('box').checked);
+           }
+       </script><br><br>
+       <input type="file" id="fle" accept=".jpg" onchange="readFile();">
+       <img src="" alt="the image will be shown here" id="result">
+       <script type="text/javascript">
+           function readFile() {
+               var reader = new FileReader();
+        
+          var file   = document.getElementById("fle").files[0];
+          
+               reader.onload = function(e) {
+    document.getElementById("result").src = e.target.result;
+               }
+             reader.readAsDataURL(file);
+           }
+       </script><br><br>
+       <input type="hidden" value="i fucking hate you" id="hid"><br>
+       <button onclick="getValue()">What was hidden</button>
+       <script type="text/javascript" >
+           function getValue() {
+               alert(document.getElementById("hid").value);
+           }
+       </script><br><br>
+       <input type="month" id="mon"><br>
+     <button onclick="getValue()">Which month ?</button>
+     <script type="text/javascript">
+         function getValue() {
+             alert(document.getElementById("mon").value);
+         }
+     </script><br><br>
+      <input type="password" id="psw"><br>
+     <button onclick="getValue()"> Wetin dey there</button>
+     <script type="text/javascript">
+         function getValue() {
+             alert(document.getElementById("psw").value);
+         }
+     </script><br><br>
+      <input type="range" id="ran"><br>
+     <button onclick="getValue()">Where e reach?</button>
+     <script type="text/javascript">
+         function getValue() {
+             alert(document.getElementById("ran").value);
+         }
+     </script><br><br>
+      <input type="search" id="sech"><br>
+     <button onclick="getValue()">U say?</button>
+     <script type="text/javascript">
+         function getValue() {
+             alert(document.getElementById("sech").value);
+         }
+     </script><br><br>
+      <input type="tel" id="num"><br>
+     <button onclick="getValue()">Your digits?</button>
+     <script type="text/javascript">
+         function getValue() {
+             alert(document.getElementById("num").value);
+         }
+     </script><br><br>
+      <input type="time" id="tmr"><br>
+     <button onclick="getValue()">What does the clock say ?</button>
+     <script type="text/javascript">
+         function getValue() {
+             alert(document.getElementById("tmr").value);
+         }
+     </script><br><br>
+      <input type="week" id="wk"><br>
+     <button onclick="getValue()">What week?</button>
+     <script type="text/javascript">
+         function getValue() {
+             alert(document.getElementById("wk").value);
+         }
+     </script><br><br>
+  
+               
+    </body>
+</html>    

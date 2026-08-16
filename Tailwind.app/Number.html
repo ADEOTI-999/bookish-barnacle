@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number</title>
+  </head>
+  <body>
+    <p id="de"></p>
+    <p id="dem"></p>
+    <p id="demo"></p>
+    <p id="demon"></p>
+    <p id="de1"></p>
+    <p id="dem1"></p>
+    <p id="demo1"></p>
+    <p id="demon1"></p>
+    <p id="de2"></p>
+    <p id="dem2"></p>
+    <p id="demo2"></p>
+    <p id="demon2"></p>
+
+    <script type="text/javascript">
+      const num1 = 311e-5;
+      document.getElementById("de").innerHTML = num1;
+      const concatenate = "2" + "7";
+      document.getElementById("dem").innerHTML = concatenate;
+      const quotient = 12 / "5";
+      document.getElementById("demo").innerHTML = quotient;
+      // hexadecimal range 0x then :- (0123456789ABCDEF )
+      const num2 = 0x369826ace;
+      document.getElementById("demon").innerHTML = num2;
+      const product = "bodies" * 7;
+      document.getElementById("de1").innerHTML = product;
+      const num3 = isNaN(7);
+      const num4 = isNaN("45");
+      const num5 = isNaN("yo what's popping");
+
+      document.getElementById("dem1").innerHTML =
+        num3 + "<br>" + num4 + "<br>" + num5 + "<br>";
+      const num6 = Number.isInteger("hello");
+      const num7 = Number.isInteger(7.78);
+      document.getElementById("demo1").innerHTML =
+        num6 + "<br>" + num7 + "<br>";
+      const nu1 = parseInt("76.34");
+      const nu2 = parseInt("3.5 months ");
+      const nu3 = parseInt("months 3");
+      document.getElementById("demon1").innerHTML =
+        nu1 + "<br>" + nu2 + "<br>" + nu3 + "<br>";
+      const nu4 = parseFloat("76.34");
+      const nu5 = parseFloat("3.5 months ");
+      const nu6 = parseFloat("months 3");
+      document.getElementById("de2").innerHTML =
+        nu4 + "<br>" + nu5 + "<br>" + nu6 + "<br>";
+      const n1 = (96.0945558).toFixed(1);
+      const n2 = (96.0945558).toFixed(2);
+      const n3 = (96.0945558).toFixed(3);
+      document.getElementById("dem2").innerHTML =
+        n1 + "<br>" + n2 + "<br>" + n3 + "<br>";
+      const n4 = (96.0945558).toExponential(1);
+      const n5 = (96.0945558).toExponential(2);
+      const n6 = (96.0945558).toExponential(3);
+      document.getElementById("demo2").innerHTML =
+        n3 + "<br>" + n5 + "<br>" + n6 + "<br>";
+      const n7 = (94).toString();
+      const n8 = (30.5).toString();
+      const n9 = (3039).toString();
+      document.getElementById("demon2").innerHTML =
+        n7 + "<br>" + n8 + "<br>" + n9 + "<br>";
+      const type = typeof NaN;
+      document.write(type);
+
+      // NUMBER.MIN_VALUE 5e-324 Smallest positive representable number in js
+      // NUMBER.MAX_VALUE 1.7976931348623157e+308 largest positive representable number in js
+      // NUMBER.MIN_SAFE_INTEGER -9007199254740991 the minimum safe integer
+      // NUMBER.MAX_SAFE_INTEGER 9007199254740991 the maximum safe integer
+       
+    </script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    <style type="text/css">
+        .content {
+       margin: 0 auto;
+       padding: 5px;
+       width: 70%;
+       border: 2px solid red;
+       } 
+         .right {
+      position: absolute;
+       padding: 10px;
+       width: 70%;
+       border: 2px solid purple;
+       right: 0;
+     
+       } 
+            .right2 {
+       float: right;
+       padding: 10px;
+       width: 70%;
+       border: 2px solid green;
+       margin: 50px 0px 0px;
+       } 
+       .vertical {
+           padding-bottom: 20px;
+           padding-top: 20px;
+           text-align: center;
+           border: 2px solid navy ;
+       }
+       .container {
+           background: silver;
+           padding-bottom: 20px;
+           padding-top: 20px;
+       }
+       .content1{
+           background: lightgrey;
+       }
+       
+       .lineheight {
+       margin:5px;
+           line-height: 150px;
+           width: 150px;
+           font-size: 22px;
+           background: brown;
+       }
+         .bottom{
+      position: absolute;
+       padding: 10px;
+       width: 50%;
+       border: 3px solid teal;
+       bottom: 0;
+       right: 0;
+       }
+       .content1:first-child::first-line {
+           background: black;
+           color: #a1a1a1;
+       }
+    </style>
+</head>
+<body>
+    <h4> Horizontally centering block-level elements</h4>
+    <div class="content">
+        I love cars !
+    </div>
+    <p> If it's an inline element we use the text-align property</p>
+    <div class="right">
+        I love cars !
+    </div>
+   
+    <div class="right2">
+        I love cars !
+    </div>
+     <p>we can also use the float property</p>
+     <h2> Vertically align </h2>
+      <div class="vertical">
+        I love cars !
+    </div>
+    <div class="container">
+    <div class="content1">
+      <p style="margin: 20px; text-align: justify;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse iaculis, arcu a bibendum fermentum, quam nunc accumsan nisl, eu porttitor lectus lectus eget lectus. Nulla congue euismod neque, quis tempus est maximus nec. </p>
+      <p style="margin: 20px; text-align: justify;"> Vivamus magna velit, convallis ut purus at, facilisis lobortis elit. Aenean lacinia efficitur leo, vitae volutpat odio lacinia vitae. Proin nec sodales mauris. Quisque lacus orci, consectetur molestie dolor at, elementum pretium nibh. </p>
+    </div>
+  </div>
+    <div class="bottom">
+        I love cars !
+    </div>
+    <div class="lineheight">
+        Hw far boss
+    </div>
+   <div class="bottom">
+        I love cars !
+    </div>
+</body>
+</html>

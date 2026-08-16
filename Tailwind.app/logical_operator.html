@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Operators</title>
+</head>
+<body>
+     <p id="de"></p>
+    <p id="dem"></p>
+    <p id="demo"></p>
+    <p id="demon"></p>
+    <script type="text/javascript">
+        //logical AND returns "true" if both operands are true
+        document.getElementById("de").innerHTML = (6>= 5 && 7 < 9);
+        //logical OR returns "true" if either of operands is true
+        document.getElementById("dem").innerHTML = (6 == 5 || 7 < 9);
+        //logical NOT returns "true" if operands is not true
+        document.getElementById("demo").innerHTML = !(false);
+        //application
+        if (5=="5" || 5!="5" )
+        document.write("The condition is true that's why i was printed");
+// javascript conditional (ternary) operator is d only operator that has 3 operands 
+// if condition is true it returns value1 if otherwise it returns value2
+// condition ? value1  : value2 
+const budget = 70000;
+const carPurchase = (budget >= 65000) ? "Transaction Successful" :" Transaction Unsuccessful";
+document.getElementById("demon").innerHTML = carPurchase;
+    </script>
+</body>
+</html>

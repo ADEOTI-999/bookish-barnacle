@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Scope</title>
+</head>
+<body>
+     <p id="dem1"></p> <button onclick="fFunc()">Show the drug thats inhibit norepinephrine synthesis</button>
+    <p id="demo1"></p> <button onclick="sFunc()">Show hyoscine bromide</button>
+    <p id="demon1"></p> <button onclick="jFunc()">Show salbutamol </button>
+    <p id="de2"></p> <button onclick="tFunc2()">Call Function </button>
+    <p id="dem2"></p> <button onclick="cFunc()">Call Function </button>
+    <p id="demo2"></p>
+    <script type="text/javascript">
+// global variable declared ouside a function can be accessed by all functions and scripts
+const drug = "Metyrosine";
+function fFunc() {
+    alert(drug);
+}
+// any variable  initialized or has been assigned a value inside a function without being declared first
+sFunc();
+document.getElementById("demo1").innerHTML = drug2+" cures motion sickness";
+
+function sFunc() {
+    drug2 = "Scopolamine";
+    alert(drug2);
+}
+// local variables are variables declared inside a function
+document.getElementById("demon1").innerHTML = drug3;
+
+function jFunc() {
+   const  drug3 = "Albuterol";
+    alert(drug3);
+}
+// gobal function 
+function tFunc() {
+document.getElementById("de2").innerHTML= "Encuecentro";
+}
+function tFunc2() {
+    tFunc();
+    document.getElementById("de2").innerHTML += " de estroso"
+}
+// local function 
+function cFunc() {
+    function getSum(x,y) {
+        return x + y;
+
+    }
+    document.getElementById("dem2").innerHTML = "The sm of 7 and 6 is " + getSum(7, 6);
+}
+    </script>
+</body>
+</html>

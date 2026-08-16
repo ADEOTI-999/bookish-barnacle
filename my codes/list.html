@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    <style type="text/css">
+     #first  {
+         list-style-type: circle;
+     }
+     #second {
+         list-style-type: square;
+     }
+     #third {
+         list-style-type: lower-alpha;
+     }
+     #fourth {
+         list-style-type: upper-roman;
+     }
+   li::before {
+         content:"*=>";
+         color: orange;
+     }
+     #first > li::after {
+         content: "™";
+         color: olive;
+     }
+     p:first-of-type::first-letter {
+         color: red;
+         font-weight: bold;
+         font-size: 32px;
+     }
+    </style>
+</head>
+<body>
+    <p>Companies under Abdurrahman</p>
+    <ul id="first">
+        <li>
+            Cars limited 
+        </li>
+        <li>Adeoti pharmacy</li>
+        <li>Adeoti tech. limited</li>
+    </ul>
+    <p>Body building</p>
+    <ol id="second">
+        
+        <li>Squats</li>
+        <li>Weighted lifts</li>
+        <li>Bench press</li>
+    </ol>
+    <p>Aerobic</p>
+    <ul id="third">
+        <li>Swimming</li>
+        <li>Running</li>
+        <li>Jump rope</li>
+        
+    </ul>
+    <p>Strengthening</p>
+    <ol id="fourth">
+        <li>Pull up</li>
+        <li>Push up</li>
+        <li>Dips</li>
+    </ol>
+    
+    <ul>
+        <li>Faculty</li>
+        <li>
+            <ul>
+          <li> Engineering </li>
+          <li>Business Admin</li>
+          <li>Accounting</li>
+          </ul>
+        </li>
+        <li>Faculty</li>
+        <li>
+            <ol>
+                <li>Actuary science</li>
+                <li>Pharmacy
+                    <ol>
+                        <li>PHCM</li>
+                        <li>PHMB</li>
+                    </ol>
+                    </li>
+                <li>Life sciences</li>
+            </ol>
+            
+        </li>
+    </ul>
+    <img src="nebula.jpg" alt="" style="width: 100%; height: 100%;" >
+</body>
+</html>

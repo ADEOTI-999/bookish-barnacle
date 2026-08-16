@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DOM HTML</title>
+</head>
+<body>
+    <ul id="listed">
+        <li>BMW</li>
+        <li>Benz</li>
+        <li>Porsche</li>
+    </ul>
+    
+    <button onclick="replaceContent()"> Switch</button>
+    <button onclick="prependContent()"> Add</button>
+    <button onclick="removeFirstChild()"> Remove First Child</button>
+    <div id="box"></div>
+    <a href="https://javascript.com" id="link"> Click Here
+    </a><br><br>
+    <button onclick="showLink()">which link is it ? </button>
+    <div><img src="/my codes/car2.jpg" id="image" alt=""></div>
+ <button onclick="changeSrcAttribute()" >Change my image </button>   
+    <script type="text/javascript">
+const list = document.getElementById("listed");
+function replaceContent() {
+    list.innerHTML = 
+   " <li>Poedagar</li>" +
+       " <li>Oris</li>" +
+      "  <li>Rolex</li>" ;
+};
+const element = document.createElement("p");
+const textNode = document.createTextNode("ipsum dolor sit amet consectetur adipisicing elit. Repell ");
+element.appendChild(textNode);
+
+document.getElementById("box").appendChild(element);
+
+const dlist = document.getElementById("listed");
+function prependContent() {
+    const li = document.createElement("li");
+    const textnode = document.createTextNode("Bughatti");
+    li.appendChild(textnode);
+    // change prepend here to append and notice what happens
+    dlist.prepend(li);
+}
+const alist = document.getElementById("listed");
+
+function removeFirstChild() {
+    const firstChild = alist.firstElementChild;
+    firstChild.remove(); 
+}
+const a = document.getElementById("link");
+const hrefValue = a.getAttribute("href");
+function showLink() {
+alert(hrefValue);
+};
+const img = document.getElementById("image");
+function changeSrcAttribute() {
+    img.setAttribute("src","/my codes/picture2.png")
+}
+
+    </script>
+</body>
+</html>

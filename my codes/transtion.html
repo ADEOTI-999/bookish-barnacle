@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+    <style type="text/css">
+        div {
+        width: 300px;
+        height: 300px;
+        background: lightseagreen;
+       transition: width 1s, height 3s, background-color 3s; 
+      
+
+    }
+    div:hover {
+        width: 350px;
+        height: 350px;
+        background: olive;
+    }
+    #linear {
+        transition-timing-function: linear;
+    }
+     #ease {
+        transition-timing-function: ease;
+    }
+     #ease-in {
+        transition-timing-function: ease-in;
+    } 
+     #ease-out {
+        transition-timing-function: ease-out;
+    }
+    #ease-in-out {
+        transition-timing-function: ease-in-out;
+    }
+     
+    </style>
+</head>
+<body>
+    <div id="trans1" style="text-align: center; padding: 30px; box-sizing: border-box;"> Default</div>
+    <p><b>linear</b> same speed throughout</p>
+     <div id="linear"></div>
+     <p><b>ease</b> default starts slowly, then fast, then slowly ends</p>
+      <div id="ease"></div>
+      <p><b>ease-in</b> starts slowly</p>
+       <div id="ease-in"></div>
+       <p><b>ease-out</b> ends slowly</p>
+        <div id="ease-out"></div>
+       <p> <b>ease-in-out</b> starts and ends slowly</p>
+         <div id="ease-in-out"></div>
+</body>
+</html>

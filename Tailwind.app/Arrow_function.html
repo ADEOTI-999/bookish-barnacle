@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow function</title>
+  </head>
+  <body>
+    <button onclick="myFunc()">Message</button><br /><br />
+    <button onclick="itFunc(7, 4)">Add 7 and 4</button><br/><br/>
+    <button onclick="sFunc('Poedagar')">How far ?</button><br/><br/>
+    <button id="btn">Calling the function</button><br/><br/>
+    <button id="btn2">Calling the function</button><br/><br/>
+    <!-- In an arrow function the tis keyword represent the object that owns it -->
+    <script type="text/javascript">
+      // if  one  statement curly brackets can be omitted
+      const myFunc = () => alert("Hasta Luego");
+      const itFunc = (x, y) => alert(x + y);
+      // if  one  parameter paranthesis can be omitted
+      const sFunc = (reloj) => alert("I have a " + reloj);
+      //  here the changestyle fnction is owned by the button element and this represent the window object
+      const btn = document.getElementById("btn");
+      btn.onclick = function() {
+        const changeStyles = () => {
+          this.style.background ="yellow";
+          this.style.color = "grey";
+          this.style.border = "none";
+
+        };
+        changeStyles();
+      };
+
+      // here the changestyle function belongs to the window object so it won't work
+      const btn2 = document.getElementById("btn2");
+   
+        const changeStyles = () => {
+          this.style.background ="yellow";
+          this.style.color = "grey";
+          this.style.border = "none";
+
+        };
+           btn.onclick = function() {
+        changeStyles();
+      };
+    </script>
+  </body>
+</html>

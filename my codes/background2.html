@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background </title>
+    <style type="text/css">
+        div{
+            margin: 5px;
+        }
+#origin1 {
+    height: 300px;
+    width: 300px;
+border: 15px black double;
+background-image: url("sea.jpg"), url(car.jpg);
+background-origin: border-box;
+background-size: 50%, 50%;
+background-position: left, right;
+padding: 20px;
+background-repeat: no-repeat, no-repeat;
+
+}
+#origin2 {
+    height: 300px;
+    width: 300px;
+    color: antiquewhite;
+border: 15px black double;
+background-image: url("nebula.jpg"), url("sea.jpg");
+background-origin: padding-box;
+background-size: 150px 200px, cover;
+background-repeat: no-repeat, no-repeat;
+padding: 10px;
+}
+#origin3 {
+    height: 300px;
+    width: 300px;
+border: 15px black double;
+background-image: url("sea.jpg"), url("picture2.png");
+background-origin: content-box, padding-box;
+background-size: 150px, cover;
+background-position: center;
+color: beige;
+background-repeat: no-repeat;
+padding: 20px;
+text-align: center;
+}
+#clip1 {
+    height: 300px;
+    width: 300px;
+border: 15px black double;
+background-image: url("sea.jpg");
+background-clip: border-box;
+-webkit-background-clip: border-box;
+background-size: 500px;
+background-position: center;
+color: darkgray;
+background-repeat: no-repeat;
+padding: 20px;
+text-align: center;
+}
+#clip2 {
+    height: 300px;
+    width: 300px;
+border: 15px black double;
+background-image: url("chain.jpg");
+background-clip: padding-box;
+-webkit-background-clip: padding-box;
+background-size: cover;
+background-position: center;
+color: coral;
+background-repeat: no-repeat;
+padding: 20px;
+text-align: center;
+}
+#clip3 {
+    height: 300px;
+    width: 300px;
+border: 15px black double;
+background-image: url("nebula.jpg");
+background-clip: content-box;
+background-size: cover;
+background-position: center;
+color:blueviolet;
+background-repeat: no-repeat;
+padding: 20px;
+text-align: center;
+-webkit-background-clip: content-box;
+}
+#text {
+    height: 300px;
+    width: 300px;
+border: 15px black double;
+background-image: url("sea.jpg");
+background-clip: text;
+color: transparent;
+font-size: 50PX;
+background-repeat: no-repeat;
+padding: 20px;
+font-weight: bold;
+text-align: center;
+-webkit-background-clip: text;
+}
+    </style>
+</head>
+<body>
+    <div id="origin1">
+        I LOVE YOU
+    </div>
+    <div id="origin2">
+        I LOVE YOU
+    </div>
+     <div id="origin3">
+        I LOVE YOU
+    </div>
+     <div id="clip1">
+        I LOVE YOU
+    </div>
+    <div id="clip2">
+        I LOVE YOU
+    </div>
+     <div id="clip3">
+        I LOVE YOU
+    </div>
+    <div id="text">
+        <P>I LOVE YOU</P>
+        <P>ADEOTI</P>
+    </div>
+    
+    
+</body>
+</html>

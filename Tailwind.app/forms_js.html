@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <form action="#" onsubmit="return validateForm()">
+        <input type="text" name="firstname" id="firstname">
+        <input type="submit">
+    </form><br><br>
+    <h3>Client Side Validation</h3>
+    <form action="#" onsubmit="return validForm()">
+       <label >Last Name:  <input type="text" name="lastname"></label>
+        <input type="submit">
+    </form>
+    <script type="text/javascript">
+function validateForm() {
+alert("This form will not submitted");
+
+return false;    
+};
+
+function validForm() {
+const lastname = document.getElementsByName("lastname")[0].value;
+if (lastname == "") {
+    alert("Please enter a value in the text field");
+    return false;
+}
+}
+
+    </script>
+</body>
+</html>

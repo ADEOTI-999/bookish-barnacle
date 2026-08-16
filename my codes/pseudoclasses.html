@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+       <style type="text/css">
+           :root {
+               background: #78969D;
+           }
+       div:empty {
+           width: 200px;
+           height: 200px;
+           background: navy;
+       } 
+        #txt:focus{
+            outline: 2px solid red;
+            color: #ff000aa5;
+        }
+        #num:in-range {
+            color: green;
+            border: 3px solid green;
+        }
+        #num:out-of-range {
+            color: red;
+            border: 3px solid red;
+        }
+        form:first-of-type > input:invalid {
+            color: red;
+            border: 3px solid red;
+        }
+         form:first-of-type > input:valid {
+            color: green;
+            border: 3px solid green;
+        }
+        p:lang(en) > q {
+            color: #af8900;
+            quotes:'"' '"';
+        }
+        p:lang(fr) > q {
+            color: #002eaf;
+            quotes: '<<' '>>';
+        }
+        p:lang(de) > q {
+            color: #af0016;
+            quotes: '>>' '<<';
+        }
+        
+        .div1 :not(p) {
+            color: aquamarine;
+        }
+        .div2 p:not(.select) {
+            color: purple;
+        }
+        label > input:optional {
+            background: grey;
+            color: yellow;
+        }
+        label > input:required {
+            background: silver;
+            color: olive;
+        }
+        #read > :read-only {
+            background: lime;
+        }
+        #read > :read-write {
+            background: fuchsia;
+        }
+    </style>
+</head>
+<body>
+    <div></div><br>
+    <input type="text" name="color" id="txt" value="She is bad">
+    <input id="num" type="number" min="45" max="100"><br><br>
+  <form action="#">
+      <label for="email">Email address</label>
+      <input id="email" name="email" type="email">
+      <br>
+      <label for="website-url">My website</label>
+      <input id="website-url" name="website" type="url">
+      <br>
+      <label for="pswrd">Password</label>
+      <input type="password" id="pswrd" name="password"
+      pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\d).{8,}">
+  </form>
+  <p lang="en"><q> I am a good boy </q></p>
+  <p lang="fr"><q> I am a good boy </q></p>
+  <p lang="de"><q> I am a good boy </q></p>
+  <p>The false sentence is not colored</p>
+  <div class="div1">
+      
+      <span>I will marry soon</span>
+      <p>I am single</p>
+      <i>After i get bastard money</i>
+  </div>
+  <div class="div2">
+      <p class="select">He is buying a purple car</p>
+      <p>Not a Toyota but a BMW</p>
+      <p>He said toyoto is for low key life</p>
+  </div>
+  <i><b>nth-child, nth-last-of child, nth-last-of-type, nth-of-type, only-of-type, only-child.</b></i>
+  <form>
+            <label>Name:
+            <input type="text" required> </label><br>
+            <label>Course
+            <input type="text" required></label><br>
+            <label>Hobby
+            <input type="text"></label><br><br>
+            <input type="reset">
+            <input type="submit">
+        </form><br>
+        <h3>Editable is fuchsia color, non-editable is lime</h3>    
+  <div id="read">
+      
+      <p contenteditable="true">Stuffs messed up.</p>
+      <p>Edit the preceeding sentence to your liking</p>
+      <input type="text" value="Input in me anything">
+  <br>  <br>  <input type="text" value="Can you do the same for me" readonly>
+  </div>
+</body>
+</html>

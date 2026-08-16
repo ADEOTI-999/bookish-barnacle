@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Is Dynamic</title>
+  </head>
+  <body>
+    <p id="dem"></p>
+    <p id="demo"></p>
+    <script type="text/javascript">
+      document.getElementById("dem").innerHTML =
+        typeof "What you need isn't what you want" +
+        "<br>" +
+        typeof 21 +
+        "<br>" +
+        typeof false +
+        "<br>" +
+        typeof unefined;
+      document.getElementById("demo").innerHTML =
+        typeof null +
+        "<br>" +
+        typeof function myfunc() {} +
+        "<br>" +
+        typeof { color: "yellow", strength: "hard" };
+    </script>
+  </body>
+</html>

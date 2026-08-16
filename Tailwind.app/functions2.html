@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNCTIONS</title>
+</head>
+<body>
+    <p id="d1">
+
+    </p><button onclick="myCar()">Call Function</button>
+    <p id="d2">
+
+    </p><button onclick="herCar()">Call Function</button>
+    <p id="d3"></p>
+    <script type="text/javascript">
+        // Global functions
+const car = "BMW";
+const ride = "porsche";
+function myCar() {
+    document.getElementById("d1").innerHTML = "I am riding a " +car+ ".";
+}
+function herCar() {
+    document.getElementById("d2").innerHTML = "She crashed her " +car+" into his " + ride +"."
+}
+function toKilogram(pounds) {
+    const kilogram = pounds *  0.454;
+    return pounds + " lb equals " +kilogram+ " Kg";
+
+  
+}
+  alert(toKilogram(3));
+
+    document.getElementById("d3").innerHTML = toKilogram(10);
+    </script>
+</body>
+</html>

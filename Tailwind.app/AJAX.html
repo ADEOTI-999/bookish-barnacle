@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+</head>
+<body>
+    <button onclick="makeRequest()">Make Request</button>
+    <script type="text/javascript">
+const httpRequest = new XMLHttpRequest();
+function makeRequest() {
+    httpRequest.onreadystatechange = writeContent;
+    httpRequest.open("GET","https://codeliber.com/test.php?firstName=Ade&lastName=Isa");
+    httpRequest.send();
+}
+function writeContent() {
+    if (httpRequest.readyState == 4) {
+        if  (httpRequest.status == 200 ) {
+            document.getElementById("de").innerHTML = httpRequest.responseText;
+        } else {
+            alert('There was a problem with the request')
+        }
+    }
+}
+    </script>
+</body>
+</html>

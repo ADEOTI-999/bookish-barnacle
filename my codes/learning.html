@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+       <title>
+            Hello world
+        </title>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+       
+        <style type="text/css">
+             div {
+                  font-size: 18px; 
+              }   
+        </style>
+    </head>
+    <body style="background-color: grey">
+        <h1 style="font-family: Times New Roman">I am a big font</h1>
+        <p style="text-align: right">Am i left or right</p>
+        
+        <p style="text-align: left">Am i right or left</p>
+        <a href="https://www.facebok.com">click here</a>
+        <p style="font-size: 50px; color: pink">
+            Goodnight job
+        </p>
+        
+        <div class="name">
+        <!-- id unique, class could be used for  more than one-->
+        <p>
+            Everywhere just dey 
+        </p>
+        <p style="color: green"> i am  green</p>
+        <p style="color: yellow"> i am yellow</p>
+        </div>
+        <h1>This car</h1>
+        <img src="nebula.jpg" width="150px">
+        <div style="background-color: white;">
+            <p style="color: #008080;">
+                Teal
+            </p>
+            <p style="color: rgb(0,128,128);">
+                Teal
+            </p>
+        </div>
+          <select id="slc">
+        <option value="Blue">Blue</option>
+        <option value="Yellow">Yellow</option>
+        <option value="Red">Red</option>
+        <option value="green">Green</option>
+    </select><br><br>
+    <button onclick="getValue();">Get Value</button>
+    <script type="text/javascript">
+        function getValue() {
+        var value = document.getElementById("slc").value;
+        alert(value);
+        }
+    </script>
+        
+    </body
+</html>    

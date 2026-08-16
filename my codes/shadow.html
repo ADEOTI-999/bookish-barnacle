@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text-shadow</title>
+    <style>
+        #fi {
+            text-shadow: -5px -3px 2px silver;
+        }
+        #se{
+             text-shadow: 5px 3px 1px grey;
+        }
+        #th{
+             text-shadow: 0 0 6px gold, 0 0 3px coral;
+        }
+        #fo{
+             text-shadow: -1px 0 blue, 0 1px blue, 1px 0 blue, -1px 0 blue;
+             color: orange;
+        }
+        #box {
+            box-shadow: 10px 5px 3px silver;
+            width: 300px;
+            height: 300px;
+            background: olive;
+            
+        }
+        .card {
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.2);
+            width: 250px;
+            font-family: sans-serif;
+            
+            color: aliceblue;
+
+        }
+        .header {
+            padding: 10px;
+            background: coral;
+            font-size: 20px;
+        }
+        .body {
+            padding: 10px;
+            background: orangered;
+        }
+        .text {
+            padding: 10px;
+            text-align: center;
+            font-size: 20px;
+        color: black;
+        }
+        .card > img {
+            height: auto;
+            max-width: 100%;
+        }
+        .card :last-of-type {
+            box-sizing: border-box;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <p id="fi">My ball</p>
+    <p id="se">His ball</p>
+    <p id="th">Their ball</p>
+    <p id="fo">uis cum pe Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quia iure recusandae modi reiciendis odio molestiae, libero ipsum, vel numquam quas possimus rem, ut ad laborum? Dolorum porro ut fugit.rspiciatis quo temporibus dignissimos natus hic, tenetur, quam dolorem commodi illo. Velit, nobis nisi. </p>
+    <div id="box"></div><br><br><br>
+    <div class="card">
+        <div class="header">Lorem ipsum</div>
+        <div class="body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, aliquid maiores, dolorem bland iti nsectetur? Temporibus molestias distinctio suscipit voluptas inventore voluptatem consectetur vero?
+        </div>
+    </div><br><br><br><br>
+    <div class="card">
+         <img src="Picture1.png" alt="">
+        <div class="text">
+            Bughatti Cheeron
+        </div>
+       
+    </div>
+
+
+</body>
+</html>

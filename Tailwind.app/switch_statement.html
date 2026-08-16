@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statement</title>
+</head>
+<body>
+     <label> Check the time for the class
+        <select name="department" onchange="classTime()" id="dment">
+            <option value="PHCH">Pharmaceutical chemistry </option>
+            <option value="PHCL">Pharmacology</option>
+            <option value="PHMB">Pharmaceutical Microbiology</option>
+            <option value="PHCH">Clinical Pharmacy </option>
+            <option value="PHCT">Industrial Pharmacy</option>
+            <option value="PHCG">Pharmacognosy</option>
+
+        </select>
+    </label>
+    <p id="class"></p>
+    <script type="text/javascript">
+// instead of multiple if statement we use switch statement
+function classTime() {
+    const course = document.getElementById("dment").value;
+    let time;
+
+    switch (course) {
+        case "PHCH":
+            time = "7 am"
+            document.getElementById("class").innerHTML = course +" is holding by "+ time;
+            break;
+        case "PHCT":
+            time = "10 am"
+            document.getElementById("class").innerHTML = course +" is holding by "+ time;
+            break;
+        case "PHCL":
+            time = "9 am"
+            document.getElementById("class").innerHTML = course +" is holding by "+ time;
+            break;
+        case "PHMB":
+            time = "11 am"
+            document.getElementById("class").innerHTML = course +" is holding by "+ time;
+            break;
+        case "PHCP":
+            time = "3 pm"
+            document.getElementById("class").innerHTML = course +" is holding by "+ time;
+            break;
+        case "PHCG":
+            time = "12 pm"
+            document.getElementById("class").innerHTML = course +" is holding by "+ time;
+            break;
+    }
+}
+
+const fruit = "BMW";
+
+switch(fruit) {
+    case "Benz":
+        document.write("It's a Mercedes Benz."+"<br>");
+        break;
+    case "Porsche":
+        document.write("It's a Porsche GTO 911."+"<br>");
+        break;
+    case "BMW":
+        document.write("It's a BMW X7 Series."+"<br>");
+        break;
+}
+// break stops the evalution the switch statement after it has matched a case
+const maleName = "Sarah";
+
+switch(fruit) {
+    case "Abdul":
+        document.write("He  is Abdul.");
+        break;
+    case "Awwal":
+        document.write("He  is Muhammmed Awwal."+"<br>");
+        break;
+    case "Sani":
+        document.write("He  is Muhammed  Sani."+"<br>");
+        break;
+        default:
+            document.write("She isn't a boy."+"<br>");
+
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Output</title>
+  </head>
+  <body>
+    <button class="border-2 bg-gray-300" onclick="sum()" type="buttons">
+alert me the result
+    </button>
+    <h4>Writing to html elements</h4>
+<p id="eg">
+   
+</p>
+ <button class="border-2 bg-gray-300" onclick="sum1()" type="buttons">
+What does it give you ?
+    </button>
+    <h4>Using keywords</h4>
+<p id="eg3">
+   How do u like it ?
+</p>
+    <button class="border-2 bg-gray-300" onclick="mytxt()" type="buttons">
+D Text?
+    </button>
+
+<h4>Writing to the browser window</h4>
+<p>Note it deletes all exixting html</p>
+    <p id="eg2">
+   
+</p>
+ <button class="border-2 bg-gray-300" onclick="sum2()" type="buttons">
+What does it give you ?
+    </button>
+    <script type="text/javascript">
+      /* const x = 5;
+      const y = 5;
+      const sum = x + y;
+
+      console.log(sum);*/
+      function sum() {
+        const x = 8;
+      const y = 7;
+      const sum = x + y;
+      alert(sum);
+      }
+      function sum1() {
+         const x = 88;
+      const y = 10;
+      const sum = x + y;
+
+      document.getElementById("eg").innerHTML = sum;
+      }
+        function sum2() {
+         const x = 28;
+      const y = 30;
+      const sum = x + y;
+
+      document.write(sum);
+      }
+      function mytxt(){
+        const text = "WET AND JUICY!!!"
+        document.getElementById("eg3").innerHTML = text;
+      }
+    </script>
+  </body>
+</html>

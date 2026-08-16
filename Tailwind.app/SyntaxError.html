@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> Name: <span id="name"></span></p>
+    <p> Message: <span id="message"></span></p>
+    <script type="text/javascript">
+        
+        try {
+       eval("document.write('Hello World)");
+        } catch (err) {
+              document.getElementById("name").innerHTML = err.name;
+        document.getElementById("message").innerHTML = err.message;
+        }
+    </script>
+</body>
+</html>

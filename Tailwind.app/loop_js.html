@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>loop</title>
+  </head>
+  <body>
+    <p id="de"></p>
+    <p id="dem"></p>
+    <p id="demo"></p>
+    <p id="demon"></p>
+    <p id="de1"></p>
+    <p id="dem1"></p>
+    <p id="demo1"></p>
+    <p id="demon1"></p>
+    <p id="de2"></p>
+    <p id="dem2"></p>
+    <p id="demo2"></p>
+    <p id="demon2"></p>
+    <script type="text/javascript">
+      // for (initialExpression; condition; incrementExpression) { code to be executed )
+      // initialExpression - initializes d loop counter
+      // conditon - if true, loop statement executes
+      // incrementExpression - increments the loop counter runs everytime the conter is executed
+      const names = [
+        "Sasuke",
+        "Naruto",
+        "Hinata",
+        "Sakura",
+        "Tsunade",
+        "jiraiya",
+      ];
+     let html = "";
+      for (let i = 0; i < names.length; i++) {
+        html += "<p>" + names[i] + "</p>";
+      }
+      document.getElementById("de").innerHTML = html;
+      //  For of loop
+      const text = "Laptop";
+      for (letter of text) {
+        document.write(letter + "<br>");
+      }
+
+      for (value of names) {
+        document.write(value + "<br>");
+      }
+     
+      //   do while loop
+      const car = ["Benz", "Porche", "Ferrari", "Mustang", "Dodge"];
+      const lnt = car.length;
+      let i = 0;
+      let hml = "";
+      while (i < lnt) {
+        hml += "<p> I rode the " + car[i] + " to the seminar </p>";
+        i++;
+      }
+      document.getElementById("dem").innerHTML = hml;
+
+    </script>
+  </body>
+</html>

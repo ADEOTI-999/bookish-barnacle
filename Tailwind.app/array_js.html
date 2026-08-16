@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <p id="de"></p>
+    <p id="dem"></p>
+    <p id="demo"></p>
+    <p id="demon"></p>
+    <p id="de1"></p>
+    <p id="dem1"></p>
+    <p id="demo1"></p>
+    <p id="demon1"></p>
+    <p id="de2"></p>
+    <p id="dem2"></p>
+    <p id="demo2"></p>
+    <p id="demon2"></p>
+
+   <script type="text/javascript">
+    // talking abt watches cuz i lost my watch
+    // Patek_Philippe, Fossil, Poedagar, Oris, Tomi, Tissot,
+     const watches = ["Rolex", "Armani", "Cartier", "Audemars_Piguet"];
+     const first = watches[3];
+     document.getElementById("de").innerHTML = first; 
+     //  push() adds one or more element to the end of the array
+     watches.push (" Tomi","Oris");
+     document.getElementById("dem").innerHTML = watches; 
+     //  unshift() adds adds one or more element to the front of the array
+     watches.unshift ("Tissot");
+     document.getElementById("demo").innerHTML = watches; 
+     //  pop() removes the last element of an array
+     watches.pop()
+     document.getElementById("demon").innerHTML = watches; 
+     //  shift() removes the last element of an array
+     watches.shift()
+     document.getElementById("de1").innerHTML = watches; 
+     const courses = ["phch312", "phcl314","phcl312"]
+     
+     document.getElementById("dem1").innerHTML = courses; 
+     //  to get array length
+     document.getElementById("demo1").innerHTML = courses.length; 
+    //  to access the last item
+     document.getElementById("demon1").innerHTML = courses[courses.length -1 ]; 
+    //  arays are objects
+     const type = typeof courses;
+          document.getElementById("de2").innerHTML = type; 
+// loop over an array 
+for (let i=0; i< watches.length; i++ ){   document.getElementById("dem2").innerHTML += watches[i] +"<br>"; 
+
+}
+   </script>
+</body>
+</html>

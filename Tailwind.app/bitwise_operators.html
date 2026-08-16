@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bitwise Operators</title>
+  </head>
+  <body>
+   <p id="de"></p>
+    <p id="dem"></p>
+    <p id="demo"></p>
+    <p id="demon"></p>
+    <script type="text/javascript">
+        // AND returns 1 if both "a" and "b" are 1
+      const num1 = 0 & 1;
+      const num2 = 1 & 1;
+      const num3 = 0 & 0;
+      document.getElementById("de").innerHTML =
+        num1 + "<br>" + num2 + "<br>" + num3 + "<br>";
+        // OR returns 1 if either "a" or "b" is 1
+          const num4 = 0 | 1;
+      const num5 = 1 | 1;
+      const num6 = 0 | 0;
+      document.getElementById("dem").innerHTML =
+        num4 + "<br>" + num5 + "<br>" + num6 + "<br>";
+        // XOR returns 1 if "a" and "b" are different
+          const num7 = 0 ^ 1;
+      const num8 = 1 ^ 1;
+      const num9 = 0 ^ 0;
+      document.getElementById("demo").innerHTML =
+        num7 + "<br>" + num8 + "<br>" + num9 + "<br>";
+
+        //NOT "a" yields the inverted value 
+        const Num7 = ~1;
+      const Num8 = ~10;
+      const Num9 = ~76;
+      document.getElementById("demon").innerHTML =
+        Num7 + "<br>" + Num8 + "<br>" + Num9 + "<br>";
+    </script>
+  </body>
+</html>

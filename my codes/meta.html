@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Abdurrahman Abdullahi">
+    <meta name="title" content="A title shown on search engines like Google, Bing and Yahoo">
+    <meta name="description" content="A description shown below the title shown on search engines like Google, Bing and Yahoo">
+    
+    <title>Page title</title>
+    <style type="text/css">
+        #tex {
+            background-color: #f3f3f3;
+            color: #0018ff;
+            resize: none;
+            border: none;
+            outline: none;
+            
+        }
+    </style>
+</head>
+<body>
+    <textarea rows="6" cols="35" placeholder="Type your message here ...."></textarea><br>
+    <textarea rows="7" cols="40" id="tex" placeholder="Type your message here..."></textarea><br>
+     <button onclick="getValue();">Get value</button>
+    <script type="text/javascript">
+       
+        function getValue() {
+            var value = document.getElementById('tex').value;
+            alert(value);
+        }
+    </script><br><br>
+  <form>
+      <label>Hard value : <textarea type="text" wrap="hard" cols="15"></textarea></textarea></label><br>
+      <label>Soft value: <textarea type="text" wrap="soft"></textarea></label></form>
+      <p contenteditable>Do not underestimate anything or anybody</p>
+      <p contenteditable style=" outline: none; caret-color: green;">Your name is Abdurrahman cuz u set d pace 4 others </p>
+  
+</body>
+</html>

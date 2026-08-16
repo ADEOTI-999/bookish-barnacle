@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strings</title>
+  </head>
+  <body>
+    <button onclick="greet()">Click Here</button>
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+      function greet() {
+        const userName = window.prompt(
+          "Welcome to Adeoti, how will you like to be addressed",
+        );
+        const str =
+          "Nice to have you here " +
+          userName +
+          " !" +
+          " we hope you enjoy your choice";
+        alert(str);
+      }
+      const nu1 = 'She is "anna"';
+      const nu2 = "to escape a  backlash \\";
+      document.getElementById("demo").innerHTML = nu1 + "<br>" + "<br>" + nu2;
+      const str = "how far na guy,how family ?";
+
+      const strlen = str.length;
+      document.write(strlen + " <br>" + "<br>");
+      const x = str[0];
+      document.write(x + "<br>" + "<br>");
+      //first occurence
+      const strPos = str.indexOf("how");
+      document.write(strPos + "<br>" + "<br>");
+      //last occurence
+      const strPos1 = str.lastIndexOf("how");
+      document.write(strPos1 + "<br>" + "<br>");
+
+      const strPos2 = str.search("see");
+      document.write(strPos2 + "<br>" + "<br>");
+      //can be made to be case insensitive
+      const strPos3 = str.search(/FaMiLy/i);
+      document.write(strPos3 + "<br>" + "<br>");
+      //Extractin a string
+      const strn =
+        "Pharmacists spot this risk when no one else in the room is thinking about DNA.";
+      const result = strn.slice(12, 26);
+      document.write(result + "<br>" + "<br>");
+      //negative values count from the end of the string
+      const result1 = strn.slice(-46, -10);
+      document.write(result1 + "<br>" + "<br>");
+      //substring doesn't take negative values
+      const result2 = strn.substring(0, 6);
+      document.write(result2 + "<br>" + "<br>");
+      const result3 = strn.substring(6);
+      const result4 = strn.slice(47);
+      document.write(result3 + "<br>" + "<br>" + result4 + "<br>" + "<br>");
+      //replacing
+      const st = "This my bughatti, my wife also has a bughatti";
+      document.write(st + "<br>" + "<br>");
+      const result5 = st.replace("bughatti", "ferarri");
+      document.write(result5 + "<br>" + "<br>");
+      //to replace all occurence
+      const result6 = st.replace(/bughatti/g, "ferarri");
+      document.write(result6 + "<br>" + "<br>");
+      // the replace is case sensitive, use /i to use insensitively
+      // trim method to remove the extra white space from both ends of string
+      const strg = "                    I love coding";
+      const result7 = strg.trim();
+      document.write(result7 + "<br>" + "<br>");
+      const result8 = strg.toUpperCase();
+      document.write(result8 + "<br>" + "<br>");
+      const result9 = strg.toLowerCase();
+      document.write(result9 + "<br>" + "<br>");
+      const resu1 = strg.concat(", ", "specifically debugging");
+      document.write(resu1 + "<br>" + "<br>");
+      
+      </script>
+  </body>
+</html>

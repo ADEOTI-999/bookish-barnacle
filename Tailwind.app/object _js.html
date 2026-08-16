@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <p id="dem"></p>
+    <button onclick="car.details()"> Tell me more</button>
+    <script type="text/javascript">
+        const car = {
+            name:"Bughatti Chiron",
+            hp: 3000,
+            color: "white",
+            price: "$5,000,000",
+details: function() {
+    alert("The " +this.color+" "+this.name + " has " +this.hp+ " horsepower and it is going for "+ this.price +"."  );
+}
+            
+        } 
+        //object in an object
+        const fruits = {
+            orange: {
+                color: "yellow",
+                taste: "sweet",
+                texture:"pulpy",
+            },
+            coconut: {
+                color: "brown",
+                taste:"sweet",
+                texture:"crunchy",
+            }
+        }
+        document.write(fruits.coconut.texture);
+
+    </script>
+</body>
+</html>

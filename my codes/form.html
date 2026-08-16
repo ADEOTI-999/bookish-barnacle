@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    <style type="text/css">
+        button {
+            border: none; 
+            background: #ff001f;
+            border-radius: 5px;
+            padding: 5px;
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #ff7e15;
+        }
+        button:active{
+            background: blue;
+            color: navy;    
+        }
+        button:disabled {
+            color: green;
+            background: teal;
+        }
+        
+    </style>
+</head>
+<body>
+    <label>
+        Sentence value
+        <input type="text" autocapitalize="sentence">
+    </label><br>
+    <label>
+        Words value
+        <input type="text" autocapitalize="words">
+    </label><br>
+    <label>
+        Characters value
+        <input type="text" autocapitalize="characters">
+    </label><br>
+    <label>
+        Turning it off
+        <input type="text" autocapitalize="off">
+    </label><br>
+    <label>
+        Autocomplete on
+        <input type="text" autocomplete="on">
+    </label><br><br>
+    <label>
+        Auto complete off
+        <input type="text" autocomplete="off">
+    </label><br><br>
+    <p>It specifies whether a form control should be focused as the page loads </p>
+    <input type="text" autofocus><br><br>
+    <input type="text" value="E no dey work" disabled>
+    <textarea disabled>E don spoil</textarea>
+    <select disabled>
+        <option value="the">option 1</option>
+        <option value="it">Option 2</option>
+    </select>
+    <br><br>
+    <form action="sample-page-handler.html">
+        <input type="date" max="2026-01-02" min="2000-01-01"><br>
+        <input type="number" max="7" min="3"><br>
+      
+    <br>
+    <label>
+        maximum character of 10 <input type="text" maxlength="10" minlength="5"><br>
+        
+    </label>
+      <input type="submit">
+    </form><br>
+    <p>Only alphanumerics below</p>
+    <form action="sample-page-handler.html">
+        <input type="text" pattern="[a-zA-Z0-9]" title="Alphanumeric values only">
+        <input type="submit">
+    </form><br><br>    
+    
+    
+    <textarea rows="15" cols="35" readonly>
+        : Teen Wolf has a total of 100 episodes over 6 seasons. The show ran from 2011 to 2017 and is now finished. 🐺
+1. Season 1: 12 episodes  
+2. Season 2: 12 episodes  
+3. Season 3: 24 episodes  
+4. Season 4: 12 episodes  
+5. Season 5: 20 episodes  
+6. Season 6: 20 episodes
+    </textarea>
+    <input type="text" value="The above can't be modified only read"><br>
+    <label>
+        Default behaviour 
+        <textarea spellcheck="default"></textarea>
+        
+    </label> <br>
+    <label>
+        Auto correct on
+        <textarea spellcheck="true"></textarea>
+    </label><br>
+    <label>
+        Autocorrect none
+        <textarea spellcheck="false"></textarea>
+    </label><br><br>
+        <form>
+            <label>Name:
+            <input type="text"> </label><br>
+            <label>Course
+            <input type="text"></label><br>
+            <input type="reset">
+            <input type="submit">
+        </form><br>
+        
+        <button>Click me</button>
+        <button disabled>Click me</button>
+    
+</body>
+
+</html>

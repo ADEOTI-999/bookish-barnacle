@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+     <style type="text/css">
+        article {
+            counter-reset: headings;
+        }
+        h3::before {
+            counter-increment: headings;
+            content: "Section" counter(headings) ":";
+
+        }
+        ol {
+            counter-reset: section;
+            list-style-type: none;
+        }
+        li::before {
+            counter-increment: section;
+            content: counters(section, ".") " ";
+        }
+
+
+     </style>
+</head>
+<body>
+    <article>
+        
+    <h3>Introduction</h3>
+    <h3>Methodology</h3>
+    <ol>
+        <li>Dry</li>
+        <li>Wash
+            <ol>
+                <li>With hydroalcoholic solvent</li>
+                <li>Or with a polar solvent
+                    <ol>
+                        <li>Water</li>
+                        <li>Chloroform</li>
+                        <li>Acids</li>
+                    </ol>
+                </li>
+            </ol>
+        </li>
+        <li>Weigh</li>
+    </ol>
+    <h3>Results</h3>
+    <h3>Discussion</h3>
+   <h3> Conclusion</h3>
+    </article>
+</body>
+</html>

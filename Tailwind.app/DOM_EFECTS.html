@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body>
+    <div
+      class="w-64 h-64 bg-green-900 m-2 rounded-2xl transition-all block duration-1000 opacity-100"
+      id="de"
+    ></div>
+    <button class="border bg-gray-300 rounded-sm p-1" onclick="fadeOut()">
+      Fade Out
+    </button>
+    <button class="border bg-gray-300 rounded-sm p-1" onclick="fadeIn()">
+      Fade In
+    </button>
+    <ul id="dem" class="list-inside list-disc max-h-[100px] overflow-y-hidden transition-all duration-1000">
+      <li>BMW</li>
+      <li>Benz</li>
+      <li>Porsche</li>
+    </ul>
+    <div>
+        <button class="border bg-gray-300 rounded-sm p-1" onclick="slideUp()">
+     Slide Up
+    </button>
+    <button class="border bg-gray-300 rounded-sm p-1" onclick="slideDown()">
+     Slide Down
+    </button>
+    </div>
+    <script type="text/javascript">
+      function fadeOut() {
+        const elem = document.getElementById("de");
+        elem.style.opacity = 0;
+        setTimeout(function () {
+          elem.style.display = "none";
+        }, 1000);
+      }
+
+      function fadeIn() {
+        const elem = document.getElementById("de");
+        elem.style.display = "block";
+        setTimeout(function () {
+          elem.style.opacity = 1;
+        }, 10);
+      }
+      function slideUp() {
+     
+            const elem = document.getElementById("dem");
+            elem.style.maxHeight = "0px"
+        }
+      function slideDown() {
+     
+            const elem = document.getElementById("dem");
+            elem.style.maxHeight = "100px"
+        }
+      
+    </script>
+  </body>
+</html>

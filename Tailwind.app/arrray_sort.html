@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Sorting</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script type="text/javascript">
+      const watches = ["Rolex", "Armani", "Cartier", "Oris"];
+      watches.sort();
+      document.write(watches + "<br>");
+      const numbers = [5, 2, 6, 8, 1, 3, 7, 4, 9];
+      //   ascending order
+      numbers.sort(function (a, b) {
+        return a - b;
+      });
+      document.write(numbers + "<br>");
+      const highest = numbers[0];
+      document.write(highest + "<br>");
+      //   descending order
+      numbers.sort(function (a, b) {
+        return b - a;
+      });
+
+      document.write(numbers + "<br>");
+      const lowest = numbers[0];
+      document.write(lowest + "<br>");
+      const patients = [
+        { name: "John Joshua", age: 45 },
+        { name: "Carter Black", age: 32 },
+        { name: "Emmanuel Yaga", age: 15 },
+        { name: "Bush Stones", age: 63 },
+      ];
+      patients.sort(function (a, b) {
+        return a.age - b.age;
+      });
+      for (let i = 0; i < patients.length; i++) {
+        document.getElementById("demo").innerHTML +=
+          "<a>Name: " +
+          patients[i].name +
+          "<br>Age: " +
+          patients[i].age +
+          "</p>";
+      }
+      // to reverse an aray
+      const names = [
+        "Sasuke",
+        "Naruto",
+        "Hinata",
+        "Sakura",
+        "Tsunade",
+        "Jiraiya",
+      ];
+      names.reverse();
+      document.write(names);
+    </script>
+  </body>
+</html>

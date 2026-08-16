@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+     <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+        html,body {
+            margin: 0;
+            padding: 0;
+        }
+        .nav-bar > ul > li {
+            float: left;
+            width: 25%;
+            text-align: center;
+             border-right: 1px solid  #333 ;
+        
+
+        }
+        .nav-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        
+           
+        .nav-bar li:last-child {
+            border: none;
+        }
+        .nav-bar > ul > li > a {
+            padding: 10px;
+            background: silver;
+        } 
+        .nav-bar > ul > li > a:hover {
+            background: grey;
+            color: white;
+        }
+        .nav-bar .active {
+            background: gray;
+            color: white;
+
+        }
+        .nav-bar > ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        .nav-bar a {
+            display: block;
+            text-decoration: none;
+            color: darkslategrey;
+            height: 50px;
+            line-height: 50px;
+
+        }
+        .content {
+            
+            margin-top: 50px;
+        }
+        .content > div {
+            height: 2000px;
+        }
+        .lime {
+            background: lime;
+        }
+        .red {
+            background: red;
+        }
+        .turquoise {
+            background: turquoise;
+        }
+
+     </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+             <li><a href="#">Services</a></li>
+              <li><a href="#">About</a></li>
+               <li><a href="#">Gallery</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="lime"></div>
+        <div class="red"></div>
+        <div class="turquoise"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+
+<head>
+    <title>Learning</title>
+</head>
+
+<body>
+    
+    <script type="text/javascript">
+        alert("Hi, i am an alert box, Now get the hell out of here");
+    </script>
+    <p id="sample">Helo world</p>
+    <button onclick="changeContent();">Want to leave the site</button>
+    <script type="text/javascript">
+        function changeContent() {
+            document.getElementById("sample").innerHTML="Too bad";}
+    </script>
+    <p id="another">I Love You</p>
+    <button onclick="changeStyles();">Change styles</button>
+    
+    <script type="text/javascript">
+        function changeStyles() {
+            document.getElementById("another").style.fontSize="20px";
+            document.getElementById("another").style.fontStyle="italic";
+            document.getElementById("another").style.color="pink";
+        }
+    </script>
+    <div id="block" style="width: 200px; height: 200px; background-color: silver; border: 6px solid black;"> </div><br>
+        <button onclick="show();">Show</button>
+        <button onclick="hide();">Hide</button>
+   
+    
+    <script type="text/javascript">
+        function show() {
+            document.getElementById("block").style.display="block";
+        }
+        function hide() {
+            document.getElementById("block").style.display="none";
+        }
+    </script>
+    
+    <img src="nebula.jpg" alt="" style="max-width: 100%; height: auto;" id="photo" class="1">
+    <button onclick="changeImage();">Abracadabra</button>
+    <script type="text/javascript">
+    function changeImage() {
+        document.getElementById("photo").src="sea.jpg";
+    }
+    </script>
+    
+    
+</body>
+</html>

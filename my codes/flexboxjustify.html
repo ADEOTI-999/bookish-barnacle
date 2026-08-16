@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justify Content</title>
+    <style type="text/css">
+        .container {
+            display: flex;
+            padding: 5px;
+            background: maroon;
+        }
+        .container > div {
+            width: 130px;
+            height: 130px;
+            margin: 5px;
+            background: coral;
+        }
+        #flex-start {
+             justify-content: flex-start;
+        }
+        #flex-end {
+            justify-content: flex-end;
+        }
+        #center {
+            justify-content: center;
+        }
+        #space-between {
+            justify-content: space-between;
+        }
+        #space-around {
+            justify-content: space-around;
+        }
+        #space-evenly {
+            justify-content: space-evenly;
+        }
+
+    </style>
+</head>
+<body> <p>flex-start</p>
+    <div class="container" id="flex-start"> 
+        <div style="width: 20%;">1</div>
+        <div style="width: 30%;">2</div>
+        <div style="width: 20%;">3</div>
+    </div><p> flex-end</p>
+    <div class="container" id="flex-end">
+        <div style="width: 20%;">1</div>
+        <div style="width: 30%;">2</div>
+        <div style="width: 20%;">3</div>
+    </div><p> center</p>
+    <div class="container" id="center"> 
+        <div style="width: 20%;">1</div>
+        <div style="width: 30%;">2</div>
+        <div style="width: 20%;">3</div>
+    </div><p>space-around distributes flex items evenly with equal spaces around them</p>
+    <div class="container" id="space-around"> 
+        <div style="width: 20%;">1</div>
+        <div style="width: 30%;">2</div>
+        <div style="width: 20%;">3</div>
+    </div><p>space-between distributes flex items evenly with the first item on the first line and the last in the end line</p>
+    <div class="container" id="space-between"> 
+        <div style="width: 20%;">1</div>
+        <div style="width: 30%;">2</div>
+        <div style="width: 20%;">3</div>
+    </div><p>space-evenly distributes flex items and makes spacing between any two items equal</p>
+    <div class="container" id="space-evenly"> 
+        <div style="width: 20%;">1</div>
+        <div style="width: 30%;">2</div>
+        <div style="width: 20%;">3</div>
+    </div>
+</body>
+</html>

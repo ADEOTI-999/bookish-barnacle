@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Iteration</title>
+</head>
+<body>
+   <p id="de"></p>
+    <p id="dem"></p>
+    <p id="demo"></p>
+    <p id="demon"></p>
+    <script type="text/javascript">
+const names = ["Sasuke", "Naruto", "Hinata", "Sakura", "Tsunade","Jiraiya"]
+for( let i = 0; i< names.length; i++) {
+    document.write(names[i] +"<br>"
+    );
+};
+names.forEach(function(value, index, array) {
+    document.getElementById("de").innerHTML += '<p> S/No: ' + index +'<br>Patients Name: '+value+'</p>';
+});
+const numbers = [12, 24, 48, 96];
+const result = numbers.map(function(value) {
+    return value/2;
+});
+document.getElementById("dem").innerHTML += result;
+const arr = [1, 5, 2, 6];
+const newArr = arr.filter(function(value) {
+    return value > 4;
+});
+document.getElementById("demo").innerHTML += newArr;
+    </script>
+    <!--  cd  C:\Users\USER\coding\Tailwind.app
+     npx tailwindcss -i input.css -o output.css --watch -->
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting a Variable</title>
+</head>
+<body>
+   <p id="dem1"></p>
+    <p id="demo1"></p>
+    <p id="demon1"></p>
+    <p id="de2"></p>
+    <p id="dem2"></p> 
+    <script type="text/javascript">
+        fruit = "coconut";
+        document.getElementById("dem1").innerHTML = fruit;
+        var fruit;
+        // try putting line 18 to the top of the script it will still be the same
+
+        var venue;
+        document.getElementById("demo1").innerHTML = venue;
+        venue = GOLT;
+        // the above wont work cuz the venue was used first before intialized
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeout and Interval</title>
+</head>
+<body>
+    <p id="tip"> To cancel click beore 4 seconds</p>
+    <button onclick="cancelTimeout()">Cancel Timeout</button>
+    <p id="de">10</p>
+    <button onclick="stopInterval()">Stop Interval</button>
+
+    <script type="text/javascript">
+        const myTimeout = setTimeout(function() {
+            alert("Hi Niggas !");
+        },
+   4000 );
+   function cancelTimeout() {
+    clearTimeout (myTimeout) ;
+document.getElementById("tip").innerHTML = "<b>Time  out </b> cancelled"
+   }
+   let x = 10;
+   const myInterval = setInterval(function() {
+    x+= 5;
+    document.getElementById("de").innerHTML = x;
+   }, 1000);
+   function stopInterval() {
+    clearInterval(myInterval);
+   }
+    </script>
+</body>
+</html>

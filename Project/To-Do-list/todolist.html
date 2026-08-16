@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do list App</title>
+    <style >
+        ul li {
+            user-select: none;
+            font-size: 18px;
+            padding: 20px 15px 20px 60px;
+            cursor: pointer;
+            position: relative;
+        }
+        ul li::before {
+            content: '';
+            background-position: center;
+            background-size: cover;
+            background-image: url("unchecked.png");
+            height: 28px;
+            border-radius: 50%;
+            width: 28px;
+            position: absolute;
+            top: 24px;
+            left: 8px;
+        }
+    ul li.checked {
+        text-decoration: line-through;
+    }
+    ul li.checked::before {
+        background-image: url("check.png");
+    }
+    span {
+        position: absolute;
+        right: 0;
+        top: 2px;
+        height: 40px;
+        font-size: 22px;
+        width: 40px;
+        text-align: center;
+        line-height: 40px;
+      border-radius: 50%;
+    }
+    span:hover {
+        background: #edeef0;
+  
+    }
+    </style>
+    <link rel="stylesheet" href="../output.css" />
+</head>
+<body>
+    
+    <div class="w-full bg-linear-to-bl from-yellow-400   to-orange-700 min-h-screen p-2" id="container">
+<div id="todo-app" class="w-full max-w-[540px] bg-white rounded-xl pt-10 px-7 pb-17 mt-25 mx-auto mb-5">
+<h2 class="flex items-center mb-5">To-Do List <img class="w-7 ml-3" src="clipbboard.png" alt=""></h2>
+<div id="row" class="flex items-center justify-between pl-5 mb-6 rounded-3xl bg-gray-200">
+    <input class="outline-none flex-1 bg-transparent p-2 text-sm" type="text" placeholder="Add your task" id="input-box">
+    <button onclick="addTask()" class="py-4 px-12 text-gold cursor-pointer rounded-4xl text-base  bg-orange-400" >Add</button>
+</div>
+<ul id="list-container">
+    <!-- <li class="checked">hgoierhgir</li>
+    <li>hgoierhgir</li> -->
+
+</ul>
+</div>
+
+</div>
+<script>
+    const inputBox = document.getElementById("input-box");
+    const listContainer = document.getElementById("list-container");
+     function addTask() {
+        if(inputBox.value === ''){
+alert("You must write something!")
+        } else {
+            let li = document.createElement("li");
+            li.innerHTML = inputBox.value;
+            listContainer.append(li);
+            let span = document.createElement("span");
+            span.innerHTML = "\u00d7";
+            li.appendChild(span);
+
+        }
+        inputBox.value = "";
+        saveData();
+
+     }
+     listContainer.addEventListener("click", function(e){
+        if(e.target.tagName === "LI") {
+            e.target.classList.toggle("checked");
+            saveData();
+        } else if (e.target.tagName === "SPAN") {
+            e.target.parentElement.remove();
+            saveData();
+        }
+
+
+     },false);
+
+     function saveData() {
+        localStorage.setItem("data", listContainer.innerHTML);
+     }
+
+     function showList(){
+        listContainer.innerHTML = localStorage.getItem("data");
+     }
+     showList();
+</script>
+</body>
+</html>

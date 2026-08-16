@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions</title>
+  </head>
+  <body>
+    <p id="d1"></p>
+    <p id="d2"></p>
+    <p id="d3"></p>
+    <p id="d4"></p>
+
+    <button type="button" onclick="addNumbers(34, 73)">Show my addition</button
+    ><br />
+
+    <button onclick="getAge(17)">Call Funnction</button>
+    <script type="text/javascript">
+      function writeText(str) {
+        document.getElementById("d1").innerHTML = str;
+      }
+      writeText("Steamy and breathtaking");
+      function addParameters(num, Num) {
+        const sum = num + Num;
+        document.getElementById("d2").innerHTML = sum;
+      }
+      addParameters(6, 3);
+      function addNumbers(num1, num2) {
+        const sum = num1 + num2;
+        document.getElementById("d3").innerHTML = sum;
+      }
+      //The Return Statement
+      function addIt(num1, num2) {
+        const sum = num1 + num2;
+        return sum;
+      }
+      document.write(addIt(6, 8));
+
+      function getFullName(firstName, lastName) {
+        return "<br> " + firstName + " " + lastName;
+      }
+      const fullName = getFullName("Puckett", "Isa");
+      document.write(fullName);
+      // Local functions
+      function getAge(age) {
+        const fullName = "Puckett Isa";
+
+        document.getElementById("d4").innerHTML =
+          fullName + " is " + age + " years old";
+      }
+    </script>
+  </body>
+</html>

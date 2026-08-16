@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    <style type="text/css">
+        p#aa {
+            color:#ff153f;
+        }
+        p.bb {
+            color: #ff7e15;
+            }
+       body {
+           background-image: url(jug.jpg);
+          
+      background-repeat: no-repeat;
+      background-position: top;
+      
+        }
+        
+        #b1, #b2, #b3 {
+         font-family: serif;
+         border: none;
+        padding: 10px 20px; 
+       font-size: 20px; 
+       margin: 5px;
+        outline: none;
+      border-radius: 15px;  
+      -webkit-transition-duration: 1s; /*for safari*/
+      transition-duration: 1s;
+        
+        }
+        #b1 {
+            background: transparent;
+            border: 4px solid #73420a;
+            color: #73420a;
+            box-shadow: .5px .5px 1px 2px silver;
+        }
+        #b1:hover {
+            background: #73420a;
+            color: white;
+            box-shadow: 1px 1px 2px 3px silver;
+            cursor: pointer;
+        }
+         #b2 {
+            background: #b40f0f;
+            color: white;
+            box-shadow: .5px .5px 1px 2px silver;
+            border: 4px solid #b40f0f;
+        }
+        #b2:hover {
+           background: white;
+            color: #b40f0f; 
+            border: 4px solid #b40f0f;
+            cursor: pointer;
+            box-shadow: 1px 1px 2px 3px silver;
+        }
+       
+        #b3 {
+            background: #00027c;
+            color: white;
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .button-group button{
+            font-family: serif;
+         border: none;
+        padding: 10px 20px; 
+       font-size: 20px; 
+       background: transparent;
+       background: #903C56;
+        outline: none;
+      border: 1px solid black;
+      -webkit-transition-duration: 1s; /*for safari*/
+      transition-duration: 1s;
+      float: left;
+        }
+         .button-group button:hover{
+             color: #903C55;
+             background: white;
+         }
+         .button-group2 button{
+            font-family: serif;
+         border: none;
+        padding: 10px 20px; 
+       font-size: 20px; 
+       background: transparent;
+       background: #903C56;
+        outline: none;
+      border: 1px solid black;
+      -webkit-transition-duration: 1s; /*for safari*/
+      transition-duration: 1s;
+      display: block;
+        }
+         .button-group2 button:hover{
+             color: #903C55;
+             background: white;
+         }
+    </style>
+</head>
+<body>
+    <p class="bb">A car</p>
+    <div class="bb">I love you</div>
+    <p id="aa">Smthg</p>
+    <div id="aa">Nice</div><br>
+    
+    <button id="b1"> Press me</button>
+    <button id="b2">Press me</button>
+    <button id="b3"> Press me</button>
+    <br><br>
+    <div class="button-group">
+    <button> Press me</button>
+    <button>Press me</button>
+    <button> Press me</button></div><br>
+    
+    <br><br><div class="button-group2">
+    <button> Press me</button>
+    <button>Press me</button>
+    <button> Press me</button></div>
+</body>
+</html>

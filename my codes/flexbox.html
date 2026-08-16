@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+     <style type="text/css">
+        *{
+            box-sizing: border-box;
+        }
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+        body {
+            margin: 0 0 10vh;
+        }
+        footer {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        header, footer {
+            background: blue;
+            color: white;
+            padding: 20px;
+            height: 10vh;
+        }
+        article, nav, aside {
+            width: 33.33%;
+            padding: 20px;
+        }
+        nav {
+            background: yellow;
+        }
+        article {
+            height: 80vh;
+            background: pink;
+
+        }
+        aside {
+            background-color: gold;
+        }
+        main {
+            display: flex;
+        }
+        @media screen and (max-width: 575px) {
+            main {
+                display: block;
+            }
+            article, nav, aside {
+            width: 100%;
+            }
+        }
+     </style>
+</head>
+<body>
+    <header>Header</header>
+   <main> 
+    <nav>Nav</nav>
+    <article>Article</article>
+    <aside>Aside</aside>
+</main>
+    <footer>Footer</footer>
+</body>
+</html>

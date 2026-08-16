@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+       <style type="text/css">
+       input:checked {
+            outline: 3px dashed #005c64;
+        }
+        input:checked + label {
+            color: #005c64;
+        }
+    </style>
+</head>
+<body>
+    <input type="file" id="fle" accept=".jpg" onchange="readFile();">
+    <img src="" alt="the image will be shown here" id="result">
+    <script type="text/javascript">
+        function readFile() {
+            var reader = new FileReader
+    var file = document.getElementById("fle").files[0];
+   
+       reader.onload = function(e) {
+       document.getElementById("result").src = e.target.result;
+       }
+       reader.readAsDataURL(file);
+        }
+    </script><br><br>
+    <p>Try entering an invalid number then click the "submit" button</p>
+    <form action="sample-page-handler-form.html">
+    
+    <input type="number" id="num">
+    <input type="submit">
+    </form><br>
+    <button onclick="getValue()">Get value</button>
+    <script type="text/javascript">
+        function getValue() {
+            alert(document.getElementById("num").value);
+        }
+    </script><br><br>
+        <input type="radio" name="gender" id="mle" value="Male">
+        <label for="mle">Male</label><br>
+        <input type="radio" name="gender" id="fml" value="Female">
+        <label for="fml">Female</label><br>
+        <button onclick="getValue()">Get value</button>
+        
+        <script type="text/javascript">
+            function getValue() {
+          var radios = document.getElementsByName('gender');
+          var number_of_radios = radios.length;
+          
+          for(var i=0; i < number_of_radios; i++) {
+              if(radios[i].checked) {
+                  alert(radios[i].value);
+              }
+          }
+            }
+        </script><br><br>
+        <p>Try entering an invalid Url then click the <q>Submit</q> button</p>
+        <form action="sample_page_handler.html"> 
+            <input type="url" id="uul">
+        <input type="Submit">    
+        </form>
+       <br>
+       <button onclick="getValue()">Let's see it</button>
+       <script type="text/javascript">
+           function getValue() {
+               alert(document.getElementById("uul").value);
+           }
+       </script>
+       
+        
+</body>
+</html>

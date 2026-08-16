@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM Pop-up Boxes</title>
+</head>
+<body>
+   <script type="text/javascript">
+    // 3 types  alert, confirm, prompt
+    if (confirm ("Do you love BMW ?")) {
+        alert("You clicked OK, Thank you.");
+    } else {
+        alert("You clicked Cancel.")
+    }
+     const firstName = prompt("What is your first name?");
+     if (firstName == "" || firstName == null) {
+        alert ("You didn't input  value.");
+     } else {
+        alert ("Hi " + firstName+ ", always remember that you are becoming GREAT ")
+    }
+   </script> 
+</body>
+</html>
